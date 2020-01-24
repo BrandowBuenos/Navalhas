@@ -1,56 +1,80 @@
 package ui;
 
 import java.awt.*;
-
+import java.awt.event.*;
 import javax.swing.*;
 
 /**
  * Customer Screen
  */
-public class AddClientes extends Inicio {
+public class AddClientes extends JPanel implements ActionListener {
+
+    private JPanel body;
+    private JPanel description;
+    private JLabel customerIcon;
 
     public AddClientes() {
+        body();
 
-        JPanel description = new JPanel();
+    }
+
+    private void body() {
+
+        body = new JPanel();
+        body.setBounds(65, 330, 1790,530);
+        body.setBackground(new Color(255, 255, 255));
+        body.setLayout(null);
+        Janela.frame.getContentPane().add(body);
+
+        description = new JPanel();
         description.setBounds(0, 0, 246, 530);
         description.setBackground(new Color(234, 234, 234));
         body.add(description);
 
-        JLabel customerIcon = new JLabel();
-        customerIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/customer-users.png")));
+        customerIcon = new JLabel();
+        customerIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/customer-add.png")));
         customerIcon.setBounds(50, 50, 0, 0);
         description.add(customerIcon);
 
+        JButton bFoto = new JButton();
+        bFoto.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/picture-customer.png")));
+        bFoto.setBounds(770, 40, 120, 120);
+        bFoto.setContentAreaFilled(false);
+        bFoto.setBorderPainted(false);
+        bFoto.setFocusable(false);
+        bFoto.addActionListener(this);
+        body.add(bFoto);
+
         JLabel nome = new JLabel("Nome");
-        nome.setBounds(663,130,200,60);
+        nome.setBounds(600, 130, 200, 60);
         nome.setFont(new Font("Helvetica Neue", Font.PLAIN, 25));
         nome.setForeground(new Color(131, 131, 131));
         body.add(nome);
 
         JTextField tNome = new JTextField("");
-        tNome.setBounds(663,200,448,60);
+        tNome.setBounds(600, 200, 448, 60);
         body.add(tNome);
 
         JLabel contatos = new JLabel("Contatos");
-        contatos.setBounds(663,280,200,60);
+        contatos.setBounds(600, 270, 200, 60);
         contatos.setFont(new Font("Helvetica Neue", Font.PLAIN, 25));
         contatos.setForeground(new Color(131, 131, 131));
         body.add(contatos);
 
         JTextField tDDDContato1 = new JTextField("");
-        tDDDContato1.setBounds(663,350,70,60);
+        tDDDContato1.setBounds(600, 350, 70, 60);
         body.add(tDDDContato1);
 
         JTextField tContato1 = new JTextField("");
-        tContato1.setBounds(750,350,362,60);
+        tContato1.setBounds(697, 350, 362, 60);
         body.add(tContato1);
 
         JTextField tDDDContato2 = new JTextField("");
-        tDDDContato2.setBounds(663,430,70,60);
+        tDDDContato2.setBounds(600, 430, 70, 60);
         body.add(tDDDContato2);
 
         JTextField tContato2 = new JTextField("");
-        tContato2.setBounds(750,430,362,60);
+        tContato2.setBounds(697, 430, 362, 60);
         body.add(tContato2);
 
         JButton bCancelar = new JButton();
@@ -70,9 +94,14 @@ public class AddClientes extends Inicio {
         bConfirmar.setFocusable(false);
         bConfirmar.addActionListener(this);
         body.add(bConfirmar);
-
+        
 
     }
-    
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        // TODO Auto-generated method stub
+
+    }
 
 }

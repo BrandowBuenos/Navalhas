@@ -4,7 +4,6 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-
 /**
  * Customer Screen
  */
@@ -20,12 +19,6 @@ public class Clientes extends JPanel implements ActionListener {
     private JButton bExcluirCliente;
 
     public Clientes() {
-        body();
-        
-    }
-
-    private void body() {
-
         body = new JPanel();
         body.setBounds(65, 460, 1790, 400);
         // height de 200 originalmente
@@ -87,7 +80,6 @@ public class Clientes extends JPanel implements ActionListener {
         bExcluirCliente.addActionListener(this);
         body.add(bExcluirCliente);
 
-
     }
 
     public void actionPerformed(ActionEvent ae) {
@@ -101,7 +93,7 @@ public class Clientes extends JPanel implements ActionListener {
             addClientes.setVisible(true);
 
         }
-    
+
         if (ae.getSource() == bConsultarCliente) {
 
             body.setVisible(false);
@@ -110,6 +102,24 @@ public class Clientes extends JPanel implements ActionListener {
             Janela.frame.getContentPane().add(conClientes);
             conClientes.setVisible(true);
 
+        }
+
+        if (ae.getSource() == bEditarCliente) {
+
+            body.setVisible(false);
+            EditarClientes edtClientes = new EditarClientes();
+
+            Janela.frame.getContentPane().add(edtClientes);
+            edtClientes.setVisible(true);
+        }
+
+        if (ae.getSource() == bExcluirCliente) {
+
+            body.setVisible(false);
+            ExcluirClientes excClientes = new ExcluirClientes();
+
+            Janela.frame.getContentPane().add(excClientes);
+            excClientes.setVisible(true);
         }
     }
 

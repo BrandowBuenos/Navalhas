@@ -1,24 +1,40 @@
 package ui;
 
 import java.awt.*;
-import java.awt.event.*;
 import javax.swing.*;
+import java.awt.event.*;
+
 
 /**
- * Customer Screen
+ * ExcluirClientes
  */
-public class AddClientes extends JPanel implements ActionListener {
+public class EditarClientes extends JPanel implements ActionListener {
 
     private JPanel body;
     private JPanel description;
     private JLabel customerIcon;
 
-    public AddClientes() {
+    private JLabel lClientes;
+    private JLabel lConsultaCpf;
+    private JTextField tConsultaCpf;
+    private JButton bVoltar;
+    private JButton bLimpar;
+    private JButton bEnviar;
+
+    EditarClientes() {
+        
+
+        /*
         body = new JPanel();
         body.setBounds(65, 330, 1790,540);
         body.setBackground(new Color(255, 255, 255));
         body.setLayout(null);
         Janela.frame.getContentPane().add(body);
+*/
+
+        setBackground(Color.WHITE);
+		setBounds(65, 330, 1790,540);
+		setLayout(null);
 
         description = new JPanel();
         description.setBounds(0, 0, 246, 530);
@@ -30,6 +46,55 @@ public class AddClientes extends JPanel implements ActionListener {
         customerIcon.setBounds(50, 50, 0, 0);
         description.add(customerIcon);
 
+       
+        lClientes = new JLabel("Consultar Cliente");
+		lClientes.setBounds(880, 100, 350, 60);
+		lClientes.setFont(new Font("Helvetica Neue", Font.PLAIN, 30));
+		lClientes.setForeground(new Color(128, 128, 128));
+		body.add(lClientes);
+
+		lConsultaCpf = new JLabel("CPF");
+		lConsultaCpf.setBounds(700, 230, 350, 40);
+		lConsultaCpf.setFont(new Font("Helvetica Neue", Font.PLAIN, 23));
+		lConsultaCpf.setForeground(new Color(128, 128, 128));
+		body.add(lConsultaCpf);
+
+		tConsultaCpf = new JTextField("");
+        tConsultaCpf.setBounds(800, 220, 400, 60);
+        tConsultaCpf.setFont(new Font("Helvetica Neue", Font.PLAIN, 25));
+        tConsultaCpf.setForeground(new Color(131, 131, 131));
+		//tConsultaCpf.setDocument(new Tratamento());
+		body.add(tConsultaCpf);
+
+		bVoltar = new JButton("<");
+		bVoltar.setBounds(300, 20, 40, 40);
+		bVoltar.setFont(new Font("Arial", Font.PLAIN, 20));
+		bVoltar.setForeground(new Color(205, 92, 92));
+		bVoltar.addActionListener(this);
+		body.add(bVoltar);
+
+		bEnviar = new JButton("Enviar");
+		bEnviar.setBounds(1020, 380, 180, 60);
+		bEnviar.setFont(new Font("Helvetica Neue", Font.PLAIN, 20));
+		bEnviar.addActionListener(this);
+		bEnviar.setForeground(new Color(0, 128, 128));
+		body.add(bEnviar);
+
+		bLimpar = new JButton("Limpar");
+		bLimpar.setBounds(800, 380, 180, 60);
+		bLimpar.setFont(new Font("Helvetica Neue", Font.PLAIN, 20));
+		bLimpar.setForeground(new Color(205, 92, 92));
+		bLimpar.addActionListener(this);
+		body.add(bLimpar);
+
+
+    }
+
+
+
+    void resultadoConsulta() {
+
+ 
         JButton bFoto = new JButton();
         bFoto.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/picture-customer.png")));
         bFoto.setBounds(770, 40, 120, 120);
@@ -98,14 +163,41 @@ public class AddClientes extends JPanel implements ActionListener {
         bConfirmar.setFocusable(false);
         bConfirmar.addActionListener(this);
         body.add(bConfirmar);
+
+        repaint();
     }
-
-
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        // TODO Auto-generated method stub
+
+        if (e.getSource() == bEnviar) {
+ /*
+			String cpfStg = tConsultaCpf.getText();
+			long cpf = Long.parseLong(cpfStg);
+
+			if (GerenciarClientes.existe(cpf) == false) {
+               
+                Component frame = null;
+				JOptionPane.showMessageDialog(frame,
+						"Nenhum cliente com este CPF foi encontrado! \nPor favor, tente outro cpf válido.", ":(",
+						JOptionPane.ERROR_MESSAGE);
+                tConsultaCpf.setText("");
+                
+
+			} else {
+				*/
+				resultadoConsulta();
+			}
+
+				
+
+		if (e.getSource() == bLimpar) {
+			tConsultaCpf.setText("");
+
+		}
+
+	
 
     }
-
+    
 }

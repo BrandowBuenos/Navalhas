@@ -15,26 +15,19 @@ public class EditarClientes extends JPanel implements ActionListener {
     private JLabel customerIcon;
 
     private JLabel lClientes;
-    private JLabel lConsultaCpf;
-    private JTextField tConsultaCpf;
+    private JLabel lConsultaNome;
+    private JTextField tConsultaNome;
     private JButton bVoltar;
     private JButton bLimpar;
     private JButton bEnviar;
 
     EditarClientes() {
         
-
-        /*
         body = new JPanel();
         body.setBounds(65, 330, 1790,540);
         body.setBackground(new Color(255, 255, 255));
         body.setLayout(null);
         Janela.frame.getContentPane().add(body);
-*/
-
-        setBackground(Color.WHITE);
-		setBounds(65, 330, 1790,540);
-		setLayout(null);
 
         description = new JPanel();
         description.setBounds(0, 0, 246, 530);
@@ -42,7 +35,7 @@ public class EditarClientes extends JPanel implements ActionListener {
         body.add(description);
 
         customerIcon = new JLabel();
-        customerIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/customer-add.png")));
+        customerIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/customer-edit.png")));
         customerIcon.setBounds(50, 50, 0, 0);
         description.add(customerIcon);
 
@@ -53,18 +46,18 @@ public class EditarClientes extends JPanel implements ActionListener {
 		lClientes.setForeground(new Color(128, 128, 128));
 		body.add(lClientes);
 
-		lConsultaCpf = new JLabel("CPF");
-		lConsultaCpf.setBounds(700, 230, 350, 40);
-		lConsultaCpf.setFont(new Font("Helvetica Neue", Font.PLAIN, 23));
-		lConsultaCpf.setForeground(new Color(128, 128, 128));
-		body.add(lConsultaCpf);
+		lConsultaNome = new JLabel("Nome");
+		lConsultaNome.setBounds(700, 230, 350, 40);
+		lConsultaNome.setFont(new Font("Helvetica Neue", Font.PLAIN, 23));
+		lConsultaNome.setForeground(new Color(128, 128, 128));
+		body.add(lConsultaNome);
 
-		tConsultaCpf = new JTextField("");
-        tConsultaCpf.setBounds(800, 220, 400, 60);
-        tConsultaCpf.setFont(new Font("Helvetica Neue", Font.PLAIN, 25));
-        tConsultaCpf.setForeground(new Color(131, 131, 131));
+		tConsultaNome = new JTextField("");
+        tConsultaNome.setBounds(800, 220, 400, 60);
+        tConsultaNome.setFont(new Font("Helvetica Neue", Font.PLAIN, 25));
+        tConsultaNome.setForeground(new Color(131, 131, 131));
 		//tConsultaCpf.setDocument(new Tratamento());
-		body.add(tConsultaCpf);
+		body.add(tConsultaNome);
 
 		bVoltar = new JButton("<");
 		bVoltar.setBounds(300, 20, 40, 40);
@@ -192,9 +185,18 @@ public class EditarClientes extends JPanel implements ActionListener {
 				
 
 		if (e.getSource() == bLimpar) {
-			tConsultaCpf.setText("");
+			tConsultaNome.setText("");
 
-		}
+        }
+        
+        if (e.getSource() == bVoltar) {
+            
+            body.setVisible(false);
+            Clientes cli = new Clientes();
+
+            Janela.frame.getContentPane().add(cli);
+            cli.setVisible(true);
+        }
 
 	
 

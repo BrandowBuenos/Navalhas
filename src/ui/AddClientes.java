@@ -13,6 +13,8 @@ public class AddClientes extends JPanel implements ActionListener {
     private JPanel description;
     private JLabel customerIcon;
 
+    private JButton bVoltar;
+
     public AddClientes() {
         body = new JPanel();
         body.setBounds(65, 330, 1790,540);
@@ -98,13 +100,27 @@ public class AddClientes extends JPanel implements ActionListener {
         bConfirmar.setFocusable(false);
         bConfirmar.addActionListener(this);
         body.add(bConfirmar);
+
+        bVoltar = new JButton("<");
+		bVoltar.setBounds(300, 20, 40, 40);
+		bVoltar.setFont(new Font("Arial", Font.PLAIN, 20));
+		bVoltar.setForeground(new Color(205, 92, 92));
+		bVoltar.addActionListener(this);
+		body.add(bVoltar);
     }
 
 
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        // TODO Auto-generated method stub
+        if (e.getSource() == bVoltar) {
+            
+            body.setVisible(false);
+            Clientes cli = new Clientes();
+
+            Janela.frame.getContentPane().add(cli);
+            cli.setVisible(true);
+        }
 
     }
 

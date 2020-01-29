@@ -50,6 +50,16 @@ public class Inicio extends Janela implements ActionListener {
 
         }
 
+        if (ae.getSource() == bAssinaturas) {
+
+            body.setVisible(false);
+            Assinaturas ass = new Assinaturas();
+
+            frame.getContentPane().add(ass);
+            ass.setVisible(true);
+
+        }
+
     }
 
    

@@ -66,7 +66,7 @@ public class Janela extends JPanel implements ActionListener {
     protected void menubar() {
 
         menubar = new JPanel();
-        menubar.setBounds(width / 5 + 20, width / 19 + 20, width / 2 + 380, width / 24);
+        menubar.setBounds(width / 5 + 30, width / 19 + 20, width / 2 + 380, width / 24);
         menubar.setBackground(new Color(34, 34, 34));
         menubar.setLayout(null);
 
@@ -89,6 +89,7 @@ public class Janela extends JPanel implements ActionListener {
         bAssinaturas.setContentAreaFilled(false);
         bAssinaturas.setBorderPainted(false);
         bAssinaturas.setFocusable(false);
+        bAssinaturas.addActionListener(this);
         menubar.add(bAssinaturas);
 
         bRelatorios = new JButton("    Relatórios");
@@ -149,10 +150,21 @@ public class Janela extends JPanel implements ActionListener {
 
         if (ae.getSource() == bClientes) {
 
+            setVisible(false);
             Clientes cli = new Clientes();
 
             frame.getContentPane().add(cli);
             cli.setVisible(true);
+
+        }
+
+        if (ae.getSource() == bAssinaturas) {
+
+            setVisible(false);
+            Assinaturas ass = new Assinaturas();
+
+            frame.getContentPane().add(ass);
+            ass.setVisible(true);
 
         }
 

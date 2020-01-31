@@ -20,20 +20,20 @@ public class Clientes extends JPanel implements ActionListener {
 
     public Clientes() {
         body = new JPanel();
-        body.setBounds(65, 460, 1790, 400);
-        // height de 200 originalmente
+        body.setBounds(65, 460, 1790, 200);
         body.setBackground(new Color(255, 255, 255));
         body.setLayout(null);
         Janela.frame.getContentPane().add(body);
 
         description = new JPanel();
+        description.setLayout(null);
         description.setBounds(0, 0, 246, 200);
         description.setBackground(new Color(234, 234, 234));
         body.add(description);
 
         customerIcon = new JLabel();
         customerIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/customer-users.png")));
-        customerIcon.setBounds(0, 50, 0, 0);
+        customerIcon.setBounds(WIDTH/20, WIDTH/12, 100, 100);
         description.add(customerIcon);
 
         bAddCliente = new JButton("\nAdicionar");

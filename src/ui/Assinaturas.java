@@ -25,19 +25,20 @@ public class Assinaturas extends JPanel implements ActionListener {
     public Assinaturas() {
 
         body = new JPanel();
-        body.setBounds(WIDTH / 30, WIDTH / 6, WIDTH - WIDTH / 15, WIDTH / 4);
+        body.setBounds(WIDTH / 30, WIDTH / 6, WIDTH - WIDTH / 15, WIDTH / 2);
         body.setBackground(new Color(255, 255, 255));
         body.setLayout(null);
         Janela.frame.getContentPane().add(body);
 
         description = new JPanel();
+        description.setLayout(null);
         description.setBounds(0, 0, WIDTH / 8, WIDTH / 4);
         description.setBackground(new Color(234, 234, 234));
         body.add(description);
 
         customerIcon = new JLabel();
         customerIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/signatures-icon.png")));
-        customerIcon.setBounds(WIDTH / 38, HEIGHT / 2, 0, 0);
+        customerIcon.setBounds(WIDTH/20, WIDTH/11, 100, 100);
         description.add(customerIcon);
 
         tPesquisa = new JTextField("Pesquisa");

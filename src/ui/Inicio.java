@@ -17,12 +17,6 @@ public class Inicio extends Janela implements ActionListener {
 
     public Inicio() {
 
-        body();
-
-    }
-
-    private void body() {
-
         body = new JPanel();
         body.setBounds(65, 400, 1790, 350);
         body.setBackground(new Color(255, 255, 255));
@@ -37,6 +31,7 @@ public class Inicio extends Janela implements ActionListener {
         body.add(message);
 
     }
+
 
     public void actionPerformed(ActionEvent ae) {
 

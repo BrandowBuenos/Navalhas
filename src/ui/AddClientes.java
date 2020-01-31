@@ -25,13 +25,14 @@ public class AddClientes extends JPanel implements ActionListener {
         Janela.frame.getContentPane().add(body);
 
         description = new JPanel();
+        description.setLayout(null);
         description.setBounds(0, 0, WIDTH/8, WIDTH/4);
         description.setBackground(new Color(234, 234, 234));
         body.add(description);
 
         customerIcon = new JLabel();
         customerIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/customer-add.png")));
-        customerIcon.setBounds(WIDTH/38, HEIGHT/2, 0, 0);
+        customerIcon.setBounds(WIDTH/20, WIDTH/12, 100, 100);
         description.add(customerIcon);
 
         JButton bFoto = new JButton();

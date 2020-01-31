@@ -40,7 +40,7 @@ public class EditarClientes extends JPanel implements ActionListener {
         description.add(customerIcon);
 
        
-        lClientes = new JLabel("Consultar Cliente");
+        lClientes = new JLabel("Editar Cliente");
 		lClientes.setBounds(880, 100, 350, 60);
 		lClientes.setFont(new Font("Helvetica Neue", Font.PLAIN, 30));
 		lClientes.setForeground(new Color(128, 128, 128));

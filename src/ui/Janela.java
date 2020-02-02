@@ -11,7 +11,7 @@ public class Janela extends JPanel implements ActionListener {
 
     public static JFrame frame;
 
-    public static JLabel fundo;
+    private JLabel fundo;
     public JLabel logo;
 
     public JPanel menubar;
@@ -33,16 +33,15 @@ public class Janela extends JPanel implements ActionListener {
         width = (int) d.getWidth();
         height = (int) d.getHeight();
 
-       
         frame();
         fundo();
         menubar();
-        footer();
+        footer();   
         frame.setVisible(true);
 
     }
 
-    public void frame() {    
+    public void frame() {
         frame = new JFrame("Barbearia Navalhas");
         frame.getContentPane().setBackground(new Color(247, 247, 247));
         frame.setSize(width, height);
@@ -57,7 +56,7 @@ public class Janela extends JPanel implements ActionListener {
         logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/logo.png")));
         logo.setBounds(height / 17, height / 43, height / 3, height / 4);
         frame.getContentPane().add(logo);
-        
+
     }
 
     protected void fundo() {
@@ -65,6 +64,7 @@ public class Janela extends JPanel implements ActionListener {
         fundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/background.png")));
         fundo.setBounds(0, 0, width, height);
         frame.getContentPane().add(fundo);
+
     }
 
     protected void menubar() {

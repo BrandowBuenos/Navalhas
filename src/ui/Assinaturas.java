@@ -10,7 +10,6 @@ import javax.swing.border.LineBorder;
  */
 public class Assinaturas extends JPanel implements ActionListener {
 
-    private JPanel body;
     private JPanel description;
     private JLabel customerIcon;
 
@@ -24,17 +23,16 @@ public class Assinaturas extends JPanel implements ActionListener {
 
     public Assinaturas() {
 
-        body = new JPanel();
-        body.setBounds(WIDTH / 30, WIDTH / 6, WIDTH - WIDTH / 15, WIDTH / 2);
-        body.setBackground(new Color(255, 255, 255));
-        body.setLayout(null);
-        Janela.frame.getContentPane().add(body);
+        setBounds(WIDTH / 30, WIDTH / 6, WIDTH - WIDTH / 15, WIDTH / 4);
+        setBackground(new Color(255, 255, 255));
+        setLayout(null);
+        setVisible(true);
 
         description = new JPanel();
         description.setLayout(null);
-        description.setBounds(0, 0, WIDTH / 8, WIDTH / 4);
+        description.setBounds(0, 0, WIDTH / 8, WIDTH / 2);
         description.setBackground(new Color(234, 234, 234));
-        body.add(description);
+        add(description);
 
         customerIcon = new JLabel();
         customerIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/signatures-icon.png")));
@@ -48,19 +46,23 @@ public class Assinaturas extends JPanel implements ActionListener {
         tPesquisa.setBackground(new Color(252, 252, 252));
         tPesquisa.setHorizontalAlignment(JTextField.CENTER);
         tPesquisa.setBorder(new LineBorder(new Color(210, 210, 210)));
-        body.add(tPesquisa);
+        add(tPesquisa);
 
         bPesquisa = new JButton("");
         bPesquisa.setBounds(WIDTH / 6, HEIGHT / 12, 65, 48);
         bPesquisa.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/search-button.png")));
         bPesquisa.setBackground(new Color(234, 234, 234));
+        bPesquisa.setBorder(null);
+        bPesquisa.setFocusable(false);
+        bPesquisa.setContentAreaFilled(false);
+        bPesquisa.setBorderPainted(false);
         bPesquisa.addActionListener(this);
-        body.add(bPesquisa);
+        add(bPesquisa);
 
         line = new JLabel();
         line.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/division-line.png")));
         line.setBounds(WIDTH/3+200, HEIGHT / 20, 889, 328);
-        body.add(line);
+        add(line);
 
     }
 

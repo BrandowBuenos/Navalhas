@@ -22,6 +22,8 @@ public class EditarClientes extends JPanel implements ActionListener {
     private JButton bEnviar;
 
     EditarClientes() {
+
+        removeAll();
         
         body = new JPanel();
         body.setBounds(65, 330, 1790,540);

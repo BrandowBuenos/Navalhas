@@ -9,7 +9,6 @@ import javax.swing.*;
  */
 public class Clientes extends JPanel implements ActionListener {
 
-    private JPanel body;
     private JPanel description;
     private JLabel customerIcon;
 
@@ -19,17 +18,19 @@ public class Clientes extends JPanel implements ActionListener {
     private JButton bExcluirCliente;
 
     public Clientes() {
-        body = new JPanel();
-        body.setBounds(65, 460, 1790, 200);
-        body.setBackground(new Color(255, 255, 255));
-        body.setLayout(null);
-        Janela.frame.getContentPane().add(body);
+
+        removeAll();
+
+        setBounds(65, 460, 1790, 200);
+        setBackground(new Color(255, 255, 255));
+        setLayout(null);
+        setVisible(true);
 
         description = new JPanel();
         description.setLayout(null);
         description.setBounds(0, 0, 246, 200);
         description.setBackground(new Color(234, 234, 234));
-        body.add(description);
+        add(description);
 
         customerIcon = new JLabel();
         customerIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/customer-users.png")));
@@ -45,7 +46,7 @@ public class Clientes extends JPanel implements ActionListener {
         bAddCliente.setBorderPainted(false);
         bAddCliente.setFocusable(false);
         bAddCliente.addActionListener(this);
-        body.add(bAddCliente);
+        add(bAddCliente);
 
         bConsultarCliente = new JButton("\nConsultar");
         bConsultarCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/customer-search.png")));
@@ -56,7 +57,7 @@ public class Clientes extends JPanel implements ActionListener {
         bConsultarCliente.setBorderPainted(false);
         bConsultarCliente.setFocusable(false);
         bConsultarCliente.addActionListener(this);
-        body.add(bConsultarCliente);
+        add(bConsultarCliente);
 
         bEditarCliente = new JButton("\nEditar");
         bEditarCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/customer-edit.png")));
@@ -67,7 +68,7 @@ public class Clientes extends JPanel implements ActionListener {
         bEditarCliente.setBorderPainted(false);
         bEditarCliente.setFocusable(false);
         bEditarCliente.addActionListener(this);
-        body.add(bEditarCliente);
+        add(bEditarCliente);
 
         bExcluirCliente = new JButton("\nExcluir");
         bExcluirCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/customer-delete.png")));
@@ -78,7 +79,7 @@ public class Clientes extends JPanel implements ActionListener {
         bExcluirCliente.setBorderPainted(false);
         bExcluirCliente.setFocusable(false);
         bExcluirCliente.addActionListener(this);
-        body.add(bExcluirCliente);
+        add(bExcluirCliente);
 
     }
 
@@ -86,7 +87,7 @@ public class Clientes extends JPanel implements ActionListener {
 
         if (ae.getSource() == bAddCliente) {
 
-            body.setVisible(false);
+            setVisible(false);
             AddClientes addClientes = new AddClientes();
 
             Janela.frame.getContentPane().add(addClientes);
@@ -96,7 +97,7 @@ public class Clientes extends JPanel implements ActionListener {
 
         if (ae.getSource() == bConsultarCliente) {
 
-            body.setVisible(false);
+            setVisible(false);
             ConsultarCliente conClientes = new ConsultarCliente();
 
             Janela.frame.getContentPane().add(conClientes);
@@ -106,7 +107,7 @@ public class Clientes extends JPanel implements ActionListener {
 
         if (ae.getSource() == bEditarCliente) {
 
-            body.setVisible(false);
+            setVisible(false);
             EditarClientes edtClientes = new EditarClientes();
 
             Janela.frame.getContentPane().add(edtClientes);
@@ -115,7 +116,7 @@ public class Clientes extends JPanel implements ActionListener {
 
         if (ae.getSource() == bExcluirCliente) {
 
-            body.setVisible(false);
+            setVisible(false);
             ExcluirClientes excClientes = new ExcluirClientes();
 
             Janela.frame.getContentPane().add(excClientes);

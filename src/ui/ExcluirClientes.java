@@ -24,7 +24,7 @@ public class ExcluirClientes extends JPanel implements ActionListener {
     private JButton bEnviar;
     private JButton bLimpar;
     private JButton bVoltar;
-    
+
     private ClienteDAO clienteDAO = new ClienteDAO();
 
     ExcluirClientes() {
@@ -34,13 +34,14 @@ public class ExcluirClientes extends JPanel implements ActionListener {
         setLayout(null);
 
         description = new JPanel();
+        description.setLayout(null);
         description.setBounds(0, 0, 246, 530);
         description.setBackground(new Color(234, 234, 234));
         add(description);
 
         customerIcon = new JLabel();
         customerIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/customer-delete.png")));
-        customerIcon.setBounds(50, 50, 0, 0);
+        customerIcon.setBounds(WIDTH/20, WIDTH/11, 100, 100);
         description.add(customerIcon);
 
         lClientes = new JLabel("Excluir Cliente");
@@ -91,19 +92,19 @@ public class ExcluirClientes extends JPanel implements ActionListener {
             String nomePesquisado = tConsultaNome.getText().trim();
             List<Cliente> listaClientes = clienteDAO.read();
             Cliente clientePesquisado = null;
-            
+
             for (Cliente cliente : listaClientes) {
                 String nomeCliente = cliente.getNome().trim();
-                
+
                 if (nomePesquisado.equalsIgnoreCase(nomeCliente)) {
                     clientePesquisado = cliente;
-                }   
+                }
             }
 
             if (clientePesquisado != null) {
                 System.out.println(clientePesquisado.getContato1());
                 clienteDAO.delete(clientePesquisado);
-            }else{
+            } else {
                 System.out.println("Cliente nao encontrado");
             }
         }

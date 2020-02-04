@@ -23,7 +23,7 @@
 
         public Assinaturas() {
 
-            setBounds(WIDTH / 30, WIDTH / 6, WIDTH - WIDTH / 15, WIDTH / 2);
+            setBounds(WIDTH / 30 , WIDTH / 6, WIDTH - WIDTH / 15,WIDTH / 2);
             setBackground(new Color(255, 255, 255));
             setLayout(null);
 

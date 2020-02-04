@@ -17,12 +17,7 @@ public class Inicio extends Janela implements ActionListener {
     private JLabel message;
 
     public Inicio() {
-        body();
-
-    }
-
-    private void body() {
-
+      
         body = new JPanel();
         body.setBounds(65, 400, 1790, 350);
         body.setBackground(new Color(255, 255, 255));
@@ -32,7 +27,7 @@ public class Inicio extends Janela implements ActionListener {
 
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy -- hh:mm");
 
-        message = new JLabel("Ola� :) , hoje é: " + dateFormat.format(new Date()));
+        message = new JLabel("Olá :) , hoje é: " + dateFormat.format(new Date()));
         message.setBounds(700, 150, 420, 25);
         message.setFont(new Font("Helvetica Neue", Font.PLAIN, 23));
         body.add(message);

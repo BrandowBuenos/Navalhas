@@ -27,18 +27,19 @@ public class ConsultarCliente extends JPanel implements ActionListener {
     private ClienteDAO clienteDAO = new ClienteDAO();
 
     ConsultarCliente() {
-        setBounds(WIDTH/30, HEIGHT/3, WIDTH - WIDTH/15, WIDTH/4);
+        setBounds( WIDTH/30 , WIDTH/6, WIDTH - WIDTH/15,WIDTH/ 4);
         setBackground(new Color(255, 255, 255));
         setLayout(null);
 
         description = new JPanel();
         description.setBounds(0, 0, WIDTH/8, WIDTH/4);
         description.setBackground(new Color(234, 234, 234));
+        description.setLayout(null);
         add(description);
 
         customerIcon = new JLabel("");
         customerIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/customer-search.png")));
-        customerIcon.setBounds(50, 200, 0, 0);
+        customerIcon.setBounds(WIDTH/20, WIDTH/11, 100, 100);
         description.add(customerIcon);
 
         lClientes = new JLabel("Consultar Cliente");

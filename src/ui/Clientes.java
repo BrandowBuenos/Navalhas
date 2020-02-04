@@ -17,24 +17,21 @@ public class Clientes extends JPanel implements ActionListener {
     private JButton bEditarCliente;
     private JButton bExcluirCliente;
 
-    public Clientes() {
-
-        removeAll();
-
-        setBounds(65, 460, 1790, 200);
+    public Clientes() { 
+        setBounds(65, 460, 1790, 400);
+        // height de 200 originalmente
         setBackground(new Color(255, 255, 255));
         setLayout(null);
-        setVisible(true);
+        //Janela.frame.getContentPane().add(body);
 
         description = new JPanel();
-        description.setLayout(null);
         description.setBounds(0, 0, 246, 200);
         description.setBackground(new Color(234, 234, 234));
         add(description);
 
         customerIcon = new JLabel();
         customerIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/customer-users.png")));
-        customerIcon.setBounds(WIDTH/20, WIDTH/12, 100, 100);
+        customerIcon.setBounds(0, 50, 0, 0);
         description.add(customerIcon);
 
         bAddCliente = new JButton("\nAdicionar");
@@ -74,7 +71,7 @@ public class Clientes extends JPanel implements ActionListener {
         bExcluirCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/customer-delete.png")));
         bExcluirCliente.setFont(new Font("Helvetica Neue", Font.PLAIN, 23));
         bExcluirCliente.setForeground(new Color(0, 0, 0));
-        bExcluirCliente.setBounds(1400, 0, 300, 200);
+        bExcluirCliente.setBounds(1200, 0, 300, 200);
         bExcluirCliente.setContentAreaFilled(false);
         bExcluirCliente.setBorderPainted(false);
         bExcluirCliente.setFocusable(false);
@@ -90,17 +87,17 @@ public class Clientes extends JPanel implements ActionListener {
             setVisible(false);
             AddClientes addClientes = new AddClientes();
 
-            Janela.frame.getContentPane().add(addClientes);
+            Inicio.add(addClientes);
+            //Janela.frame.getContentPane().add(addClientes);
             addClientes.setVisible(true);
 
         }
 
         if (ae.getSource() == bConsultarCliente) {
-
             setVisible(false);
             ConsultarCliente conClientes = new ConsultarCliente();
-
-            Janela.frame.getContentPane().add(conClientes);
+            Inicio.add(conClientes);
+            Inicio.remove(this);
             conClientes.setVisible(true);
 
         }
@@ -109,8 +106,8 @@ public class Clientes extends JPanel implements ActionListener {
 
             setVisible(false);
             EditarClientes edtClientes = new EditarClientes();
-
-            Janela.frame.getContentPane().add(edtClientes);
+            Inicio.add(edtClientes);
+            Inicio.remove(this);
             edtClientes.setVisible(true);
         }
 
@@ -118,8 +115,9 @@ public class Clientes extends JPanel implements ActionListener {
 
             setVisible(false);
             ExcluirClientes excClientes = new ExcluirClientes();
-
-            Janela.frame.getContentPane().add(excClientes);
+            Inicio.add(excClientes);
+            Inicio.remove(this);
+            //Janela.frame.getContentPane().add(excClientes);
             excClientes.setVisible(true);
         }
     }

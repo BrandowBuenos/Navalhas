@@ -18,11 +18,10 @@ public class Clientes extends JPanel implements ActionListener {
     private JButton bExcluirCliente;
 
     public Clientes() { 
+
         setBounds(65, 460, 1790, 400);
-        // height de 200 originalmente
         setBackground(new Color(255, 255, 255));
         setLayout(null);
-        //Janela.frame.getContentPane().add(body);
 
         description = new JPanel();
         description.setBounds(0, 0, 246, 200);

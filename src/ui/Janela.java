@@ -9,7 +9,7 @@ import javax.swing.*;
  */
 public class Janela extends JFrame implements ActionListener {
 
-    public static JLabel fundo;
+    public ImagePanel fundo;
     public JLabel logo;
 
     public JPanel menubar;
@@ -22,8 +22,8 @@ public class Janela extends JFrame implements ActionListener {
     public JLabel instagram;
     public JLabel facebook;
 
-    private int width;
-    private int height;
+    public int width;
+    public int height;
 
     public Janela() {
         Toolkit tk = Toolkit.getDefaultToolkit();
@@ -31,7 +31,6 @@ public class Janela extends JFrame implements ActionListener {
         width = (int) d.getWidth();
         height = (int) d.getHeight();
 
-       
         frame();
         fundo();
         menubar();
@@ -51,10 +50,12 @@ public class Janela extends JFrame implements ActionListener {
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setResizable(false);
 
+        
         logo = new JLabel("");
         logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/logo.png")));
         logo.setBounds(height / 17, height / 43, height / 3, height / 4);
         getContentPane().add(logo);
+        
         
     }
 

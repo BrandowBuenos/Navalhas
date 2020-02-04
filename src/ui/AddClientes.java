@@ -55,7 +55,7 @@ public class AddClientes extends JPanel implements ActionListener {
         bFoto.addActionListener(this);
         add(bFoto);
 
-        JLabel lFoto = new JLabel();
+        lFoto = new JLabel();
         lFoto.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/picture-customer.png")));
         lFoto.setBounds(WIDTH/1, WIDTH/48, WIDTH/17, WIDTH/17);
         lFoto.setFocusable(false);

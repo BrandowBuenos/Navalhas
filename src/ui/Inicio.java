@@ -17,12 +17,18 @@ public class Inicio extends Janela implements ActionListener {
     private JLabel message;
 
     public Inicio() {
-      
+
+        Toolkit tk = Toolkit.getDefaultToolkit();
+        Dimension d = tk.getScreenSize();
+        width = (int) d.getWidth();
+        height = (int) d.getHeight();
+        
+        
         body = new JPanel();
         body.setBounds(65, 400, 1790, 350);
         body.setBackground(new Color(255, 255, 255));
         body.setLayout(null);
-        
+
         getContentPane().add(body);
 
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy -- hh:mm");
@@ -30,13 +36,14 @@ public class Inicio extends Janela implements ActionListener {
         message = new JLabel("Olá :) , hoje é: " + dateFormat.format(new Date()));
         message.setBounds(700, 150, 420, 25);
         message.setFont(new Font("Helvetica Neue", Font.PLAIN, 23));
-        body.add(message);
+        body.add(message);      
 
     }
 
     public static void add(JPanel panel) {
         getFrames()[0].add(panel);
     }
+
     public static void remove(JPanel panel) {
         getFrames()[0].remove(panel);
     }
@@ -57,16 +64,13 @@ public class Inicio extends Janela implements ActionListener {
             Assinaturas ass = new Assinaturas();
 
             ass.setVisible(true);
-            
+
             getContentPane().add(ass);
 
         }
         if (ae.getSource() == bRelatorios) {
 
-            
-
         }
     }
 
-   
 }

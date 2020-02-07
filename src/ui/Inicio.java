@@ -25,7 +25,9 @@ public class Inicio extends Janela implements ActionListener {
         
         
         body = new JPanel();
-        body.setBounds(65, 400, 1790, 350);
+        body.setBounds(WIDTH / 30, WIDTH / 6, WIDTH - WIDTH / 15, WIDTH / 2);
+       // Antes 
+       // body.setBounds(65, 400, 1790, 350);
         body.setBackground(new Color(255, 255, 255));
         body.setLayout(null);
 

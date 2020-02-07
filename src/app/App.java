@@ -9,6 +9,6 @@ public class App {
 
 	public static void main(String[] args) {
 	
-		Inicio in = new Inicio();
+		Janela in = new Janela();
 	}
 }

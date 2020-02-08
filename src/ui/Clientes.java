@@ -17,9 +17,9 @@ public class Clientes extends JPanel implements ActionListener {
     private JButton bEditarCliente;
     private JButton bExcluirCliente;
 
-    public Clientes() { 
+    public Clientes() {
 
-        setBounds(65, 460, 1790, 400);
+        setBounds(65, 460, 1790, 200);
         setBackground(new Color(255, 255, 255));
         setLayout(null);
 
@@ -76,6 +76,7 @@ public class Clientes extends JPanel implements ActionListener {
         bExcluirCliente.setFocusable(false);
         bExcluirCliente.addActionListener(this);
         add(bExcluirCliente);
+        
 
     }
 
@@ -83,42 +84,33 @@ public class Clientes extends JPanel implements ActionListener {
 
         if (ae.getSource() == bAddCliente) {
 
+            AddClientes pAddCliente = new AddClientes();
             setVisible(false);
-            AddClientes addClientes = new AddClientes();
-
-            Inicio.add(addClientes);
-            //Janela.frame.getContentPane().add(addClientes);
-            addClientes.setVisible(true);
+            Janela.panelInicio(pAddCliente);
+            pAddCliente.setVisible(true);
 
         }
 
-        if (ae.getSource() == bConsultarCliente) {
-            setVisible(false);
-            ConsultarCliente conClientes = new ConsultarCliente();
-            Inicio.add(conClientes);
-            Inicio.remove(this);
-            conClientes.setVisible(true);
-
-        }
-
-        if (ae.getSource() == bEditarCliente) {
-
-            setVisible(false);
-            EditarClientes edtClientes = new EditarClientes();
-            Inicio.add(edtClientes);
-            Inicio.remove(this);
-            edtClientes.setVisible(true);
-        }
-
-        if (ae.getSource() == bExcluirCliente) {
-
-            setVisible(false);
-            ExcluirClientes excClientes = new ExcluirClientes();
-            Inicio.add(excClientes);
-            Inicio.remove(this);
-            //Janela.frame.getContentPane().add(excClientes);
-            excClientes.setVisible(true);
-        }
+        /*
+         * if (ae.getSource() == bConsultarCliente) { setVisible(false);
+         * ConsultarCliente conClientes = new ConsultarCliente();
+         * Inicio.add(conClientes); Inicio.remove(this); conClientes.setVisible(true);
+         * 
+         * }
+         * 
+         * if (ae.getSource() == bEditarCliente) {
+         * 
+         * setVisible(false); EditarClientes edtClientes = new EditarClientes();
+         * Inicio.add(edtClientes); Inicio.remove(this); edtClientes.setVisible(true); }
+         * 
+         * if (ae.getSource() == bExcluirCliente) {
+         * 
+         * setVisible(false); ExcluirClientes excClientes = new ExcluirClientes();
+         * Inicio.add(excClientes); Inicio.remove(this);
+         * //Janela.frame.getContentPane().add(excClientes);
+         * excClientes.setVisible(true); }
+         * 
+         */
     }
 
 }

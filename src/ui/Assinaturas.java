@@ -21,7 +21,7 @@ public class Assinaturas extends JPanel implements ActionListener {
 
     private JLabel line;
 
-    public JPanel historico;
+    private JPanel historico;
 
     private JLabel lProfilePicture;
     private JLabel lQtdServicos;

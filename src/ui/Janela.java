@@ -8,8 +8,7 @@ import java.util.Date;
 import javax.swing.*;
 
 /**
- * Classe que inicia o programa e cria a estrutura básica (Cabecalho, logo,
- * menu e rodape)
+ * Classe que inicia o programa e cria a estrutura basica (Logo, menu e rodape)
  */
 public class Janela implements ActionListener {
 
@@ -40,6 +39,8 @@ public class Janela implements ActionListener {
         width = (int) d.getWidth();
         height = (int) d.getHeight();
 
+        // Frame
+
         frame = new JFrame("Barbearia Navalhas");
         frame.getContentPane().setBackground(new Color(247, 247, 247));
         frame.setSize(width, height);
@@ -50,7 +51,8 @@ public class Janela implements ActionListener {
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.setResizable(false);
 
-        // Painel aqui para nao atrapalhar na transparencia
+        // Painel de conteudo (nesta posicao para nao atrapalhar na transparencia)
+
         panel = new JPanel();
         panel.setBounds(65, 400, 1790, 350);
         panel.setBackground(new Color(255, 255, 255));
@@ -64,15 +66,21 @@ public class Janela implements ActionListener {
         message.setFont(new Font("Helvetica Neue", Font.PLAIN, 23));
         panel.add(message);
 
+        // Fundo
+
         fundo = new JLabel();
         fundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/background.png")));
         fundo.setBounds(0, 0, width, height);
         frame.getContentPane().add(fundo);
 
+        // Logo
+
         logo = new JLabel("");
         logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/logo.png")));
         logo.setBounds(height / 17, height / 43, height / 3, height / 4);
         frame.getContentPane().add(logo);
+
+        // Menu
 
         menu = new JPanel();
         menu.setBounds(width / 5 + 30, width / 19 + 20, width / 2 + 380, width / 24);
@@ -112,6 +120,8 @@ public class Janela implements ActionListener {
         bRelatorios.addActionListener(this);
         menu.add(bRelatorios);
         frame.getContentPane().add(menu);
+
+        // Rodape
 
         whatsapp = new JLabel();
         whatsapp.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/whatsapp-icon.png")));
@@ -163,7 +173,6 @@ public class Janela implements ActionListener {
             cli.setVisible(true);
         }
 
-        
         if (ae.getSource() == bAssinaturas) {
 
             panel.setVisible(false);
@@ -172,7 +181,13 @@ public class Janela implements ActionListener {
             ass.setVisible(true);
         }
 
-        
+        if (ae.getSource() == bRelatorios) {
+
+            panel.setVisible(false);
+            Relatorios rel = new Relatorios();
+            frame.getContentPane().add(rel);
+            rel.setVisible(true);
+        }
 
     }
 
@@ -182,5 +197,4 @@ public class Janela implements ActionListener {
         j.setVisible(true);
     }
 
-   
 }

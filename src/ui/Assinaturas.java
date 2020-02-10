@@ -21,18 +21,12 @@ public class Assinaturas extends JPanel implements ActionListener {
 
     private JLabel line;
 
-    private JPanel historico;
+    public JPanel historico;
 
     private JLabel lProfilePicture;
     private JLabel lQtdServicos;
     private JLabel lQtdServicosGratis;
 
-    private JPanel jServicoExecutado;
-    private JButton jAddServicoExecutado;
-
-    private JLabel statusIcon;
-    private JLabel dateIcon;
-    private JLabel date;
 
     private final int WIDTH = (int) Toolkit.getDefaultToolkit().getScreenSize().getWidth();
     private final int HEIGHT = (int) Toolkit.getDefaultToolkit().getScreenSize().getHeight();
@@ -116,62 +110,13 @@ public class Assinaturas extends JPanel implements ActionListener {
         lQtdServicosGratis.setForeground(new Color(110, 110, 110));
         historico.add(lQtdServicosGratis);
 
-        jServicoExecutado = new JPanel();
-        jServicoExecutado.setLayout(null);
-        jServicoExecutado.setBackground(new Color(245, 245, 245));
-        jServicoExecutado.setBounds(WIDTH / 20 - 20, HEIGHT / 4 - 20, 150, 150);
-        
-        statusIcon = new JLabel();
-        statusIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/confirm-icon.png")));
-        statusIcon.setBounds(WIDTH-WIDTH + 115 , HEIGHT-HEIGHT + 15 , 22, 22);
-        jServicoExecutado.add(statusIcon);
 
-        dateIcon = new JLabel();
-        dateIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/calendar-icon.png")));
-        dateIcon.setBounds(WIDTH-WIDTH + 65 , HEIGHT-HEIGHT + 30 , 25, 25);
-        jServicoExecutado.add(dateIcon);
+        // Cards aqui
 
-        date = new JLabel("02/01/2020");
-        date.setBounds(WIDTH-WIDTH + 30 , HEIGHT-HEIGHT + 80 , 200, 25);
-        date.setFont(new Font("Helvetica Neue", Font.PLAIN, 18));
-        jServicoExecutado.add(date);
-        historico.add(jServicoExecutado);
-
-        /** Outro quadrado */
-
-        jServicoExecutado = new JPanel();
-        jServicoExecutado.setLayout(null);
-        jServicoExecutado.setBounds(WIDTH / 20 + 140, HEIGHT / 4 - 20, 150, 150);
-        jServicoExecutado.setBackground(new Color(245, 245, 245));
-        
-        statusIcon = new JLabel();
-        statusIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/undo-icon.png")));
-        statusIcon.setBounds(WIDTH-WIDTH + 115 , HEIGHT-HEIGHT + 15 , 22, 22);
-        jServicoExecutado.add(statusIcon);
-
-        dateIcon = new JLabel();
-        dateIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/calendar-icon.png")));
-        dateIcon.setBounds(WIDTH-WIDTH + 65 , HEIGHT-HEIGHT + 30 , 25, 25);
-        jServicoExecutado.add(dateIcon);
-
-        date = new JLabel("16/01/2020");
-        date.setBounds(WIDTH-WIDTH + 30 , HEIGHT-HEIGHT + 80 , 200, 25);
-        date.setFont(new Font("Helvetica Neue", Font.PLAIN, 18));
-        jServicoExecutado.add(date);
-        historico.add(jServicoExecutado);
-
-        /** Quadrado de adicionar */
-
-        jAddServicoExecutado = new JButton();
-        jAddServicoExecutado.setLayout(null);
-        jAddServicoExecutado.setBounds(WIDTH / 20 + 300, HEIGHT / 4 - 20, 150, 150);
-        
-        statusIcon = new JLabel();
-        statusIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/add-icon.png")));
-        statusIcon.setBounds(WIDTH-WIDTH + 57 , HEIGHT-HEIGHT + 45 , 60, 60);
-        jAddServicoExecutado.add(statusIcon);
-
-        historico.add(jAddServicoExecutado);
+        Cards cards = new Cards();
+        historico.add(cards.cardConfirmado());
+        historico.add(cards.cardUndo());
+        historico.add(cards.cardAdd());
 
     }
 

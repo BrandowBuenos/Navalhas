@@ -220,11 +220,10 @@ public class EditarClientes extends JPanel implements ActionListener {
         
         if (e.getSource() == bVoltar) {
             
+            Clientes clientes = new Clientes();
             setVisible(false);
-            Clientes cli = new Clientes();
-            Inicio.add(cli);
-            //Janela.frame.getContentPane().add(cli);
-            cli.setVisible(true);
+            Janela.panelInicio(clientes);
+            clientes.setVisible(true);
         }
 
 	

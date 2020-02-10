@@ -76,7 +76,6 @@ public class Clientes extends JPanel implements ActionListener {
         bExcluirCliente.setFocusable(false);
         bExcluirCliente.addActionListener(this);
         add(bExcluirCliente);
-        
 
     }
 
@@ -91,26 +90,32 @@ public class Clientes extends JPanel implements ActionListener {
 
         }
 
-        /*
-         * if (ae.getSource() == bConsultarCliente) { setVisible(false);
-         * ConsultarCliente conClientes = new ConsultarCliente();
-         * Inicio.add(conClientes); Inicio.remove(this); conClientes.setVisible(true);
-         * 
-         * }
-         * 
-         * if (ae.getSource() == bEditarCliente) {
-         * 
-         * setVisible(false); EditarClientes edtClientes = new EditarClientes();
-         * Inicio.add(edtClientes); Inicio.remove(this); edtClientes.setVisible(true); }
-         * 
-         * if (ae.getSource() == bExcluirCliente) {
-         * 
-         * setVisible(false); ExcluirClientes excClientes = new ExcluirClientes();
-         * Inicio.add(excClientes); Inicio.remove(this);
-         * //Janela.frame.getContentPane().add(excClientes);
-         * excClientes.setVisible(true); }
-         * 
-         */
+        if (ae.getSource() == bConsultarCliente) {
+
+            ConsultarCliente conClientes = new ConsultarCliente();
+            setVisible(false);
+            Janela.panelInicio(conClientes);
+            conClientes.setVisible(true);
+
+        }
+
+        if (ae.getSource() == bEditarCliente) {
+
+            EditarClientes edtClientes = new EditarClientes();
+            setVisible(false);
+            Janela.panelInicio(edtClientes);
+            edtClientes.setVisible(true);
+        }
+
+        if (ae.getSource() == bExcluirCliente) {
+
+          
+            ExcluirClientes excClientes = new ExcluirClientes();
+            setVisible(false);
+            Janela.panelInicio(excClientes);
+            excClientes.setVisible(true);
+        }
+
     }
 
 }

@@ -138,12 +138,11 @@ public class AddClientes extends JPanel implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == bVoltar) {
             
+            Clientes clientes = new Clientes();
             setVisible(false);
-            Clientes cli = new Clientes();
-            Inicio.add(cli);
-            Inicio.remove(this);
-            //Janela.frame.getContentPane().add(cli);
-            cli.setVisible(true);
+            Janela.panelInicio(clientes);
+            clientes.setVisible(true);
+
         }
 
         if (e.getSource() == bFoto) {

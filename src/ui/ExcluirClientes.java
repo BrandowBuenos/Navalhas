@@ -115,11 +115,10 @@ public class ExcluirClientes extends JPanel implements ActionListener {
         }
 
         if (e.getSource() == bVoltar) {
-
+            Clientes clientes = new Clientes();
             setVisible(false);
-            Clientes cli = new Clientes();
-            Inicio.add(cli);
-            cli.setVisible(true);
+            Janela.panelInicio(clientes);
+            clientes.setVisible(true);
         }
 
     }

@@ -7,7 +7,10 @@ import javax.swing.*;
 /**
  * Customer Screen
  */
+
 public class Clientes extends JPanel implements ActionListener {
+    
+    private JButton bVoltar;
 
     private JPanel description;
     private JLabel customerIcon;
@@ -17,11 +20,19 @@ public class Clientes extends JPanel implements ActionListener {
     private JButton bEditarCliente;
     private JButton bExcluirCliente;
 
+    
     public Clientes() {
 
         setBounds(65, 460, 1790, 200);
         setBackground(new Color(255, 255, 255));
         setLayout(null);
+
+        bVoltar = new JButton("<");
+        bVoltar.setBounds(WIDTH/6, HEIGHT/4, WIDTH/32, HEIGHT/24);
+		bVoltar.setFont(new Font("Arial", Font.PLAIN, 20));
+        bVoltar.setForeground(new Color(205, 92, 92));
+        bVoltar.addActionListener(this);
+        add(bVoltar);
 
         description = new JPanel();
         description.setBounds(0, 0, 246, 200);
@@ -80,6 +91,14 @@ public class Clientes extends JPanel implements ActionListener {
     }
 
     public void actionPerformed(ActionEvent ae) {
+
+        if (ae.getSource() == bVoltar) {
+           
+            Assinaturas ass = new Assinaturas();
+            setVisible(false);
+            Janela.panelInicio(ass);
+            ass.setVisible(true);
+        }
 
         if (ae.getSource() == bAddCliente) {
 

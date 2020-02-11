@@ -1,20 +1,26 @@
 package ui;
 
 import java.awt.*;
+import java.awt.event.*;
 import javax.swing.*;
 
 /**
  * cards
  */
-public class Cards extends JPanel {
+public class Cards extends JPanel implements ActionListener{
 
 
     private JLabel statusIcon;
+
+    private JButton addButton;
+
     private JLabel dateIcon;
     private JLabel date;
 
     private final int WIDTH = (int) Toolkit.getDefaultToolkit().getScreenSize().getWidth();
     private final int HEIGHT = (int) Toolkit.getDefaultToolkit().getScreenSize().getHeight();
+
+    Assinaturas ass;
 
     JPanel cardConfirmado() {
 
@@ -71,12 +77,27 @@ public class Cards extends JPanel {
         setLayout(null);
         setBounds(WIDTH / 20 + 300, HEIGHT / 4 - 20, 150, 150);
 
-        statusIcon = new JLabel();
-        statusIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/add-icon.png")));
-        statusIcon.setBounds(WIDTH - WIDTH + 57, HEIGHT - HEIGHT + 45, 60, 60);
-        add(statusIcon);
+        addButton = new JButton();
+        addButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/add-icon.png")));
+        addButton.setBounds(0 , 0,150, 150);
+        addButton.setBorderPainted(false);
+        addButton.setFocusPainted(false);
+        add(addButton);
+        addButton.addActionListener(this);
 
         return this;
+
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if (e.getSource() == addButton) {
+
+            AddAssinaturas addAssinaturas = new AddAssinaturas();
+            ass.setVisible(false);
+            Janela.panelInicio(addAssinaturas);
+            addAssinaturas.setVisible(true);
+        }
 
     }
 

@@ -3,7 +3,6 @@ package ui;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
-import javax.swing.border.LineBorder;
 
 /**
  * Customer Screen
@@ -12,20 +11,6 @@ public class AddAssinaturas extends JPanel implements ActionListener {
 
     private JPanel description;
     private JLabel customerIcon;
-
-    private JTextField tPesquisa;
-    private JButton bPesquisa;
-
-    private JLabel lNome;
-    private JLabel lContador;
-
-    private JLabel line;
-
-    private JPanel historico;
-
-    private JLabel lProfilePicture;
-    private JLabel lQtdServicos;
-    private JLabel lQtdServicosGratis;
 
 
     private final int WIDTH = (int) Toolkit.getDefaultToolkit().getScreenSize().getWidth();
@@ -53,6 +38,8 @@ public class AddAssinaturas extends JPanel implements ActionListener {
     }
 
     public void actionPerformed(ActionEvent ae) {
+
+        
 
     }
 

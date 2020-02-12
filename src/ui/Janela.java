@@ -74,7 +74,7 @@ public class Janela implements ActionListener {
 
         logo = new JLabel("");
         logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/logo.png")));
-        logo.setBounds(49, 5, 160, 160);
+        logo.setBounds(52, 5, 160, 160);
         frame.getContentPane().add(logo);
 
         // Menu
@@ -86,7 +86,7 @@ public class Janela implements ActionListener {
 
         bClientes = new JButton("    Clientes");
         bClientes.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/customer-icon.png")));
-        bClientes.setFont(new Font("Helvetica Neue", Font.PLAIN, 19));
+        bClientes.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
         bClientes.setForeground(new Color(255, 255, 255));
         bClientes.setBounds(0, 0, 348, 56);
         bClientes.setContentAreaFilled(false);
@@ -97,7 +97,7 @@ public class Janela implements ActionListener {
 
         bAssinaturas = new JButton("    Assinaturas");
         bAssinaturas.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/signature-icon.png")));
-        bAssinaturas.setFont(new Font("Helvetica Neue", Font.PLAIN, 19));
+        bAssinaturas.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
         bAssinaturas.setForeground(new Color(255, 255, 255));
         bAssinaturas.setBounds(348,0,348,56);
         bAssinaturas.setContentAreaFilled(false);
@@ -108,7 +108,7 @@ public class Janela implements ActionListener {
 
         bRelatorios = new JButton("    Relatórios");
         bRelatorios.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/report-icon.png")));
-        bRelatorios.setFont(new Font("Helvetica Neue", Font.PLAIN, 19));
+        bRelatorios.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
         bRelatorios.setForeground(new Color(255, 255, 255));
         bRelatorios.setBounds(696,0,348,56);
         bRelatorios.setContentAreaFilled(false);

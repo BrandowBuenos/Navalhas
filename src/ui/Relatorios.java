@@ -13,20 +13,10 @@ public class Relatorios extends JPanel implements ActionListener {
     private JPanel description;
     private JLabel customerIcon;
 
-    private JTextField tPesquisa;
-    private JButton bPesquisa;
-
-    private JLabel lNome;
-    private JLabel lContador;
-
-    private JLabel line;
-
-    private JPanel historico;
-
-    private JLabel lProfilePicture;
-    private JLabel lQtdServicos;
-    private JLabel lQtdServicosGratis;
-
+    private JButton bDiario;
+    private JButton bSemanal;
+    private JButton bMensal;
+    private JButton bAnual;
 
     private final int WIDTH = (int) Toolkit.getDefaultToolkit().getScreenSize().getWidth();
     private final int HEIGHT = (int) Toolkit.getDefaultToolkit().getScreenSize().getHeight();
@@ -44,79 +34,78 @@ public class Relatorios extends JPanel implements ActionListener {
         add(description);
 
         customerIcon = new JLabel();
-        customerIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/signatures-icon.png")));
+        customerIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/chart-icon.png")));
         customerIcon.setBounds(WIDTH / 20, WIDTH / 11, 100, 100);
         description.add(customerIcon);
 
-        tPesquisa = new JTextField("Pesquisa");
-        tPesquisa.setBounds(WIDTH / 5, HEIGHT / 12, 384, 48);
-        tPesquisa.setFont(new Font("Helvetica Neue", Font.PLAIN, 23));
-        tPesquisa.setForeground(new Color(90, 90, 90));
-        tPesquisa.setBackground(new Color(252, 252, 252));
-        tPesquisa.setHorizontalAlignment(JTextField.CENTER);
-        tPesquisa.setBorder(new LineBorder(new Color(210, 210, 210)));
-        add(tPesquisa);
+        bDiario = new JButton();
+        bDiario.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/circle-button.png")));
+        bDiario.setBounds(WIDTH/6+50, HEIGHT/7+15, 280, 110);
+        bDiario.setBackground(new Color(0,0,0));
+        bDiario.setBorderPainted(false);
+        bDiario.setContentAreaFilled(false);
+        bDiario.setFocusable(false);
+        bDiario.setLayout(null);
+        bDiario.addActionListener(this);
+        add(bDiario);
 
-        bPesquisa = new JButton("");
-        bPesquisa.setBounds(WIDTH / 6, HEIGHT / 12, 65, 48);
-        bPesquisa.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/search-button.png")));
-        bPesquisa.setBackground(new Color(234, 234, 234));
-        bPesquisa.addActionListener(this);
-        add(bPesquisa);
+        JLabel diario = new JLabel("Diário");
+        diario.setForeground(new Color(255, 255, 255));
+        diario.setFont(new Font("Helvetica Neue", Font.PLAIN, 25));
+        diario.setBounds(110, 45, 100, 23);
+        bDiario.add(diario);
 
-        lContador = new JLabel("09");
-        lContador.setBounds(WIDTH / 6, HEIGHT / 5, 500, 24);
-        lContador.setFont(new Font("Helvetica Neue", Font.PLAIN, 23));
-        lContador.setForeground(new Color(110, 110, 110));
-        add(lContador);
+        bSemanal = new JButton();
+        bSemanal.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/circle-button.png")));
+        bSemanal.setBounds(WIDTH/3+50, HEIGHT/7+15, 280, 110);
+        bSemanal.setBackground(new Color(0,0,0));
+        bSemanal.setBorderPainted(false);
+        bSemanal.setContentAreaFilled(false);
+        bSemanal.setFocusable(false);
+        bSemanal.setLayout(null);
+        bSemanal.addActionListener(this);
+        add(bSemanal);
 
-        lNome = new JLabel("Vinicius Correia Martins");
-        lNome.setBounds(WIDTH / 5, HEIGHT / 5, 500, 24);
-        lNome.setFont(new Font("Helvetica Neue", Font.PLAIN, 23));
-        lNome.setForeground(new Color(47, 47, 47));
-        add(lNome);
+        JLabel lSemanal = new JLabel("Semanal");
+        lSemanal.setForeground(new Color(255, 255, 255));
+        lSemanal.setFont(new Font("Helvetica Neue", Font.PLAIN, 25));
+        lSemanal.setBounds(95, 45, 100, 23);
+        bSemanal.add(lSemanal);
 
-        line = new JLabel();
-        line.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/division-line.png")));
-        line.setBounds(WIDTH / 3 + 200, HEIGHT / 20, 889, 328);
-        add(line);
+        bMensal = new JButton();
+        bMensal.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/circle-button.png")));
+        bMensal.setBounds(WIDTH/2+50, HEIGHT/7+15, 280, 110);
+        bMensal.setBackground(new Color(0,0,0));
+        bMensal.setBorderPainted(false);
+        bMensal.setContentAreaFilled(false);
+        bMensal.setFocusable(false);
+        bMensal.setLayout(null);
+        bMensal.addActionListener(this);
+        add(bMensal);
 
-        historico = new JPanel();
-        historico.setLayout(null);
-        historico.setBounds(WIDTH / 2 - 119, 0, WIDTH / 2, WIDTH / 4);
-        historico.setBackground(new Color(255, 255, 255));
-        add(historico);
-
-        lProfilePicture = new JLabel();
-        lProfilePicture.setBounds(WIDTH / 20 - 20, HEIGHT / 18, 100, 100);
-        lProfilePicture.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/profile-picture.png")));
-        historico.add(lProfilePicture);
-
-        lNome = new JLabel("Vinicius Correia Martins");
-        lNome.setBounds(WIDTH / 9, HEIGHT / 18, 500, 25);
-        lNome.setFont(new Font("Helvetica Neue", Font.PLAIN, 25));
-        lNome.setForeground(new Color(47, 47, 47));
-        historico.add(lNome);
-
-        lQtdServicos = new JLabel("Quantidade de serviços: 29");
-        lQtdServicos.setBounds(WIDTH / 9, HEIGHT / 11, 500, 26);
-        lQtdServicos.setFont(new Font("Helvetica Neue", Font.PLAIN, 18));
-        lQtdServicos.setForeground(new Color(110, 110, 110));
-        historico.add(lQtdServicos);
-
-        lQtdServicosGratis = new JLabel("Quantidade de serviços grátis: 02");
-        lQtdServicosGratis.setBounds(WIDTH / 9, HEIGHT / 9, 500, 26);
-        lQtdServicosGratis.setFont(new Font("Helvetica Neue", Font.PLAIN, 18));
-        lQtdServicosGratis.setForeground(new Color(110, 110, 110));
-        historico.add(lQtdServicosGratis);
+        JLabel lMensal = new JLabel("Mensal");
+        lMensal.setForeground(new Color(255, 255, 255));
+        lMensal.setFont(new Font("Helvetica Neue", Font.PLAIN, 25));
+        lMensal.setBounds(95, 45, 100, 23);
+        bMensal.add(lMensal);
 
 
-        // Cards aqui
+        bAnual = new JButton();
+        bAnual.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/circle-button.png")));
+        bAnual.setBounds(WIDTH/2+370, HEIGHT/7+15, 280, 110);
+        bAnual.setBackground(new Color(0,0,0));
+        bAnual.setBorderPainted(false);
+        bAnual.setContentAreaFilled(false);
+        bAnual.setFocusable(false);
+        bAnual.setLayout(null);
+        bAnual.addActionListener(this);
+        add(bAnual);
 
-        Cards cards = new Cards();
-        historico.add(cards.cardConfirmado());
-        historico.add(cards.cardUndo());
-        historico.add(cards.cardAdd());
+        JLabel lAnual = new JLabel("Anual");
+        lAnual.setForeground(new Color(255, 255, 255));
+        lAnual.setFont(new Font("Helvetica Neue", Font.PLAIN, 25));
+        lAnual.setBounds(105, 45, 100, 23);
+        bAnual.add(lAnual);        
 
     }
 

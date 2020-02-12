@@ -40,8 +40,8 @@ public class Relatorios extends JPanel implements ActionListener {
 
         bDiario = new JButton();
         bDiario.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/circle-button.png")));
-        bDiario.setBounds(WIDTH/6+50, HEIGHT/7+15, 280, 110);
-        bDiario.setBackground(new Color(0,0,0));
+        bDiario.setBounds(WIDTH / 6 + 50, HEIGHT / 7 + 15, 280, 110);
+        bDiario.setBackground(new Color(0, 0, 0));
         bDiario.setBorderPainted(false);
         bDiario.setContentAreaFilled(false);
         bDiario.setFocusable(false);
@@ -57,8 +57,8 @@ public class Relatorios extends JPanel implements ActionListener {
 
         bSemanal = new JButton();
         bSemanal.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/circle-button.png")));
-        bSemanal.setBounds(WIDTH/3+50, HEIGHT/7+15, 280, 110);
-        bSemanal.setBackground(new Color(0,0,0));
+        bSemanal.setBounds(WIDTH / 3 + 50, HEIGHT / 7 + 15, 280, 110);
+        bSemanal.setBackground(new Color(0, 0, 0));
         bSemanal.setBorderPainted(false);
         bSemanal.setContentAreaFilled(false);
         bSemanal.setFocusable(false);
@@ -74,8 +74,8 @@ public class Relatorios extends JPanel implements ActionListener {
 
         bMensal = new JButton();
         bMensal.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/circle-button.png")));
-        bMensal.setBounds(WIDTH/2+50, HEIGHT/7+15, 280, 110);
-        bMensal.setBackground(new Color(0,0,0));
+        bMensal.setBounds(WIDTH / 2 + 50, HEIGHT / 7 + 15, 280, 110);
+        bMensal.setBackground(new Color(0, 0, 0));
         bMensal.setBorderPainted(false);
         bMensal.setContentAreaFilled(false);
         bMensal.setFocusable(false);
@@ -89,11 +89,10 @@ public class Relatorios extends JPanel implements ActionListener {
         lMensal.setBounds(95, 45, 100, 23);
         bMensal.add(lMensal);
 
-
         bAnual = new JButton();
         bAnual.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/circle-button.png")));
-        bAnual.setBounds(WIDTH/2+370, HEIGHT/7+15, 280, 110);
-        bAnual.setBackground(new Color(0,0,0));
+        bAnual.setBounds(WIDTH / 2 + 370, HEIGHT / 7 + 15, 280, 110);
+        bAnual.setBackground(new Color(0, 0, 0));
         bAnual.setBorderPainted(false);
         bAnual.setContentAreaFilled(false);
         bAnual.setFocusable(false);
@@ -105,11 +104,19 @@ public class Relatorios extends JPanel implements ActionListener {
         lAnual.setForeground(new Color(255, 255, 255));
         lAnual.setFont(new Font("Helvetica Neue", Font.PLAIN, 25));
         lAnual.setBounds(105, 45, 100, 23);
-        bAnual.add(lAnual);        
+        bAnual.add(lAnual);
 
     }
 
     public void actionPerformed(ActionEvent ae) {
+
+        if (ae.getSource() == bAnual) {
+
+            RelatoriosAnual pRelatoriosAnuais = new RelatoriosAnual();
+            setVisible(false);
+            Janela.panelInicio(pRelatoriosAnuais);
+            pRelatoriosAnuais.setVisible(true);
+        }
 
     }
 

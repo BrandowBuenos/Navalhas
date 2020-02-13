@@ -7,7 +7,7 @@ import javax.swing.*;
 /**
  * Relatorios
  */
-public class RelatoriosAnual extends JPanel implements ActionListener {
+public class RelatoriosMes extends JPanel implements ActionListener {
     
     private JPanel description;
     private JLabel customerIcon;
@@ -21,7 +21,7 @@ public class RelatoriosAnual extends JPanel implements ActionListener {
     private JLabel lBarbeiro;
     private JButton bVoltar;
 
-    public RelatoriosAnual() {
+    public RelatoriosMes() {
 
         removeAll();
 

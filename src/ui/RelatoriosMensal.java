@@ -255,18 +255,15 @@ public class RelatoriosMensal extends JPanel implements ActionListener {
 
         if (ae.getSource() == bJaneiro) {
 
-            RelatoriosAnual pRelatoriosAnuais = new RelatoriosAnual();
+            RelatoriosMes pRelatoriosMes = new RelatoriosMes();
             setVisible(false);
-            Janela.panelInicio(pRelatoriosAnuais);
-            pRelatoriosAnuais.setVisible(true);
+            Janela.panelInicio(pRelatoriosMes);
+            pRelatoriosMes.setVisible(true);
         }
 
         if (ae.getSource() == bFevereiro) {
 
-            RelatoriosMensal pRelatoriosMensais = new RelatoriosMensal();
-            setVisible(false);
-            Janela.panelInicio(pRelatoriosMensais);
-            pRelatoriosMensais.setVisible(true);
+         
         }
 
     }

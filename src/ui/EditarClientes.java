@@ -55,34 +55,34 @@ public class EditarClientes extends JPanel implements ActionListener {
 
        
         lClientes = new JLabel("Editar Cliente");
-		lClientes.setBounds(WIDTH/2 - WIDTH/20, WIDTH/19, WIDTH/5, WIDTH/32);
+		lClientes.setBounds(WIDTH/2 - WIDTH/10, WIDTH/15, WIDTH/5, WIDTH/32);
 		lClientes.setFont(new Font("Helvetica Neue", Font.PLAIN, 30));
 		lClientes.setForeground(new Color(128, 128, 128));
 		add(lClientes);
 
 		lConsultaNome = new JLabel("Nome");
-		lConsultaNome.setBounds(WIDTH/2 - WIDTH/5, HEIGHT/5, WIDTH/5, HEIGHT/27);
+		lConsultaNome.setBounds(WIDTH/2 - WIDTH/4, HEIGHT/4, WIDTH/5, HEIGHT/27);
 		lConsultaNome.setFont(new Font("Helvetica Neue", Font.PLAIN, 23));
 		lConsultaNome.setForeground(new Color(128, 128, 128));
 		add(lConsultaNome);
 
 		tConsultaNome = new JTextField("");
-        tConsultaNome.setBounds(WIDTH/2 - WIDTH/8, HEIGHT/5, WIDTH/4 + WIDTH/35, HEIGHT/18);
+        tConsultaNome.setBounds(WIDTH/2 - WIDTH/6, HEIGHT/4, WIDTH/4 + WIDTH/35, HEIGHT/18);
         tConsultaNome.setFont(new Font("Helvetica Neue", Font.PLAIN, 25));
         tConsultaNome.setForeground(new Color(131, 131, 131));
 		//tConsultaCpf.setDocument(new Tratamento());
 		add(tConsultaNome);
 
 		bVoltar = new JButton("<");
-		bVoltar.setBounds(WIDTH/6, HEIGHT/54, WIDTH/32, HEIGHT/24);
-		bVoltar.setFont(new Font("Arial", Font.PLAIN, 20));
+        bVoltar.setBounds(230, 50, 50, 50);
+        bVoltar.setFont(new Font("Arial", Font.PLAIN, 20));
         bVoltar.setForeground(new Color(205, 92, 92));
         bVoltar.setBackground(new Color(255, 255, 255));
 		bVoltar.addActionListener(this);
 		add(bVoltar);
 
 		bEnviar = new JButton("Enviar");
-		bEnviar.setBounds(WIDTH/2 + WIDTH/35, HEIGHT/4 + HEIGHT/15, WIDTH/11, HEIGHT/18);
+		bEnviar.setBounds(WIDTH/3 + WIDTH/6, HEIGHT/3 + HEIGHT/15, WIDTH/11, HEIGHT/18);
 		bEnviar.setFont(new Font("Helvetica Neue", Font.PLAIN, 20));
         bEnviar.addActionListener(this);
         bEnviar.setBackground(new Color(255, 255, 255));
@@ -90,7 +90,7 @@ public class EditarClientes extends JPanel implements ActionListener {
 		add(bEnviar);
 
 		bLimpar = new JButton("Limpar");
-		bLimpar.setBounds(WIDTH/3 + WIDTH/20, HEIGHT/4 + HEIGHT/15,WIDTH/11, HEIGHT/18);
+		bLimpar.setBounds(WIDTH/3 + WIDTH/26, HEIGHT/3 + HEIGHT/15,WIDTH/11, HEIGHT/18);
 		bLimpar.setFont(new Font("Helvetica Neue", Font.PLAIN, 20));
         bLimpar.setForeground(new Color(205, 92, 92));
         bLimpar.setBackground(new Color(255, 255, 255));

@@ -45,6 +45,7 @@ public class Janela implements ActionListener {
         frame.getContentPane().setBackground(new Color(247, 247, 247));
         frame.setSize(1366, 768);
         frame.setLayout(null);
+        frame.setResizable(false);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLocationRelativeTo(null);
 

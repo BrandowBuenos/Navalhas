@@ -38,19 +38,19 @@ public class EditarClientes extends JPanel implements ActionListener {
 
     public EditarClientes() {
         
-        setBounds(WIDTH/30, HEIGHT/3, WIDTH - WIDTH/15, WIDTH/4);
+        setBounds(45, 182, 1275, 460);
         setBackground(new Color(255, 255, 255));
         setLayout(null);
 
         description = new JPanel();
-        description.setBounds(0, 0, WIDTH/8, WIDTH/4);
+        description.setBounds(0, 0, 175, 460);
         description.setBackground(new Color(234, 234, 234));
         description.setLayout(null);
         add(description);
 
         customerIcon = new JLabel("");
         customerIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/customer-edit.png")));
-        customerIcon.setBounds(WIDTH/20, WIDTH/11, 100, 100);
+        customerIcon.setBounds(65, 196, 50, 45);
         description.add(customerIcon);
 
        

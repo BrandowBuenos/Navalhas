@@ -107,7 +107,7 @@ public class Janela implements ActionListener {
         bAssinaturas.addActionListener(this);
         menu.add(bAssinaturas);
 
-        bRelatorios = new JButton("    Relatórios");
+        bRelatorios = new JButton("   Relatórios");
         bRelatorios.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/report-icon.png")));
         bRelatorios.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
         bRelatorios.setForeground(new Color(255, 255, 255));

@@ -51,7 +51,7 @@ public class Janela implements ActionListener {
         // Painel de conteudo (nesta posicao para nao atrapalhar na transparencia)
 
         panel = new JPanel();
-        panel.setBounds(45, 182, 1275, 470);
+        panel.setBounds(45, 182, 1275, 460);
         panel.setBackground(new Color(255, 255, 255));
         panel.setLayout(null);
         frame.getContentPane().add(panel);
@@ -165,6 +165,7 @@ public class Janela implements ActionListener {
         if (ae.getSource() == bClientes) {
 
             panel.setVisible(false);
+            panel.removeAll();
             Clientes cli = new Clientes();
             frame.getContentPane().add(cli);
             cli.setVisible(true);

@@ -20,12 +20,11 @@ public class Clientes extends JPanel implements ActionListener {
     private JButton bEditarCliente;
     private JButton bExcluirCliente;
 
-    
+   
     public Clientes() {
 
-        removeAll();
-
-        setBounds(46, 327, 1273, 145);
+        //setBounds(46, 327, 1273, 145);
+        setBounds(45, 182, 1275, 460);
         setBackground(new Color(255, 255, 255));
         setLayout(null);
 
@@ -51,7 +50,7 @@ public class Clientes extends JPanel implements ActionListener {
         bAddCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/customer-add.png")));
         bAddCliente.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
         bAddCliente.setForeground(new Color(0, 0, 0));
-        bAddCliente.setBounds(250, 50, 300, 40);
+        bAddCliente.setBounds(220, 50, 300, 40);
         bAddCliente.setContentAreaFilled(false);
         bAddCliente.setBorderPainted(false);
         bAddCliente.setFocusable(false);
@@ -62,7 +61,7 @@ public class Clientes extends JPanel implements ActionListener {
         bConsultarCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/customer-search.png")));
         bConsultarCliente.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
         bConsultarCliente.setForeground(new Color(0, 0, 0));
-        bConsultarCliente.setBounds(500, 50, 300, 40);
+        bConsultarCliente.setBounds(470, 50, 300, 40);
         bConsultarCliente.setContentAreaFilled(false);
         bConsultarCliente.setBorderPainted(false);
         bConsultarCliente.setFocusable(false);
@@ -73,7 +72,7 @@ public class Clientes extends JPanel implements ActionListener {
         bEditarCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/customer-edit.png")));
         bEditarCliente.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
         bEditarCliente.setForeground(new Color(0, 0, 0));
-        bEditarCliente.setBounds(750, 50, 300, 40);
+        bEditarCliente.setBounds(720, 50, 300, 40);
         bEditarCliente.setContentAreaFilled(false);
         bEditarCliente.setBorderPainted(false);
         bEditarCliente.setFocusable(false);
@@ -84,13 +83,14 @@ public class Clientes extends JPanel implements ActionListener {
         bExcluirCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/customer-delete.png")));
         bExcluirCliente.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
         bExcluirCliente.setForeground(new Color(0, 0, 0));
-        bExcluirCliente.setBounds(1000, 50, 300, 40);
+        bExcluirCliente.setBounds(970, 50, 300, 40);
         bExcluirCliente.setContentAreaFilled(false);
         bExcluirCliente.setBorderPainted(false);
         bExcluirCliente.setFocusable(false);
         bExcluirCliente.addActionListener(this);
         add(bExcluirCliente);
 
+       
     }
 
     public void actionPerformed(ActionEvent ae) {
@@ -106,6 +106,7 @@ public class Clientes extends JPanel implements ActionListener {
         if (ae.getSource() == bAddCliente) {
 
             AddClientes pAddCliente = new AddClientes();
+            removeAll();
             setVisible(false);
             Janela.panelInicio(pAddCliente);
             pAddCliente.setVisible(true);

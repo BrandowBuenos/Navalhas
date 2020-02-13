@@ -8,9 +8,11 @@ import javax.swing.*;
  * Relatorios
  */
 public class RelatoriosAnual extends JPanel implements ActionListener {
-
+    
     private JPanel description;
     private JLabel customerIcon;
+
+    private JLabel line1;
 
     private JButton bVoltar;
 
@@ -18,6 +20,8 @@ public class RelatoriosAnual extends JPanel implements ActionListener {
     private final int HEIGHT = (int) Toolkit.getDefaultToolkit().getScreenSize().getHeight();
 
     public RelatoriosAnual() {
+
+        removeAll();
 
         setBounds(45, 182, 1275, 460);
         setBackground(new Color(255, 255, 255));
@@ -42,7 +46,10 @@ public class RelatoriosAnual extends JPanel implements ActionListener {
         customerIcon.setBounds(65, 196, 55, 55);
         description.add(customerIcon);
 
-
+        line1 = new JLabel();
+        line1.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/line1.png")));
+        line1.setBounds(WIDTH / 3 + 200, HEIGHT / 20, 889, 328);
+        add(line1);
      
 
        

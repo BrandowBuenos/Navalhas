@@ -22,6 +22,8 @@ public class Relatorios extends JPanel implements ActionListener {
 
     public Relatorios() {
 
+        removeAll();
+
         setBounds(45, 182, 1275, 460);
         setBackground(new Color(255, 255, 255));
         setLayout(null);

@@ -31,9 +31,9 @@ public class EditarClientes extends JPanel implements ActionListener {
     private JButton bLimpar;
     private JButton bEnviar;
     private JButton bConfirmar;
-    private final int WIDTH = (int) Toolkit.getDefaultToolkit().getScreenSize().getWidth();
-    private final int HEIGHT = (int) Toolkit.getDefaultToolkit().getScreenSize().getHeight();
     
+    private final int WIDTH = 1366;
+    private final int HEIGHT = 768;
     private ClienteDAO clienteDAO = new ClienteDAO();
 
     public EditarClientes() {
@@ -55,19 +55,19 @@ public class EditarClientes extends JPanel implements ActionListener {
 
        
         lClientes = new JLabel("Editar Cliente");
-		lClientes.setBounds(WIDTH/2 - WIDTH/10, WIDTH/15, WIDTH/5, WIDTH/32);
+		lClientes.setBounds(WIDTH/2 - WIDTH/20, WIDTH/14, WIDTH/5, WIDTH/32);
 		lClientes.setFont(new Font("Helvetica Neue", Font.PLAIN, 30));
 		lClientes.setForeground(new Color(128, 128, 128));
 		add(lClientes);
 
 		lConsultaNome = new JLabel("Nome");
-		lConsultaNome.setBounds(WIDTH/2 - WIDTH/4, HEIGHT/4, WIDTH/5, HEIGHT/27);
+		lConsultaNome.setBounds(WIDTH/2 - WIDTH/5, HEIGHT/5 + HEIGHT/15, WIDTH/5, HEIGHT/27);
 		lConsultaNome.setFont(new Font("Helvetica Neue", Font.PLAIN, 23));
 		lConsultaNome.setForeground(new Color(128, 128, 128));
 		add(lConsultaNome);
 
 		tConsultaNome = new JTextField("");
-        tConsultaNome.setBounds(WIDTH/2 - WIDTH/6, HEIGHT/4, WIDTH/4 + WIDTH/35, HEIGHT/18);
+        tConsultaNome.setBounds(WIDTH/2 - WIDTH/8, HEIGHT/5 + HEIGHT/15, WIDTH/4 + WIDTH/15, HEIGHT/16);
         tConsultaNome.setFont(new Font("Helvetica Neue", Font.PLAIN, 25));
         tConsultaNome.setForeground(new Color(131, 131, 131));
 		//tConsultaCpf.setDocument(new Tratamento());
@@ -82,7 +82,7 @@ public class EditarClientes extends JPanel implements ActionListener {
 		add(bVoltar);
 
 		bEnviar = new JButton("Enviar");
-		bEnviar.setBounds(WIDTH/3 + WIDTH/6, HEIGHT/3 + HEIGHT/15, WIDTH/11, HEIGHT/18);
+		bEnviar.setBounds(WIDTH/2 + WIDTH/40 + WIDTH/32, HEIGHT/3 + HEIGHT/15, WIDTH/10, HEIGHT/16);
 		bEnviar.setFont(new Font("Helvetica Neue", Font.PLAIN, 20));
         bEnviar.addActionListener(this);
         bEnviar.setBackground(new Color(255, 255, 255));
@@ -90,7 +90,7 @@ public class EditarClientes extends JPanel implements ActionListener {
 		add(bEnviar);
 
 		bLimpar = new JButton("Limpar");
-		bLimpar.setBounds(WIDTH/3 + WIDTH/26, HEIGHT/3 + HEIGHT/15,WIDTH/11, HEIGHT/18);
+		bLimpar.setBounds(WIDTH/3 + WIDTH/12, HEIGHT/3 + HEIGHT/15,WIDTH/10, HEIGHT/16);
 		bLimpar.setFont(new Font("Helvetica Neue", Font.PLAIN, 20));
         bLimpar.setForeground(new Color(205, 92, 92));
         bLimpar.setBackground(new Color(255, 255, 255));

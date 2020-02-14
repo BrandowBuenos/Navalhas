@@ -108,12 +108,20 @@ public class Relatorios extends JPanel implements ActionListener {
 
     public void actionPerformed(ActionEvent ae) {
 
-        if (ae.getSource() == bAnual) {
+        if (ae.getSource() == bDiario) {
 
-            RelatoriosAnual pRelatoriosAnuais = new RelatoriosAnual();
+            RelatoriosDiario pRelatoriosDiarios = new RelatoriosDiario();
             setVisible(false);
-            Janela.panelInicio(pRelatoriosAnuais);
-            pRelatoriosAnuais.setVisible(true);
+            Janela.panelInicio(pRelatoriosDiarios);
+            pRelatoriosDiarios.setVisible(true);
+        }
+
+        if (ae.getSource() == bSemanal) {
+
+            RelatoriosSemanal pRelatoriosSemanal = new RelatoriosSemanal();
+            setVisible(false);
+            Janela.panelInicio(pRelatoriosSemanal);
+            pRelatoriosSemanal.setVisible(true);
         }
 
         if (ae.getSource() == bMensal) {
@@ -122,6 +130,14 @@ public class Relatorios extends JPanel implements ActionListener {
             setVisible(false);
             Janela.panelInicio(pRelatoriosMensais);
             pRelatoriosMensais.setVisible(true);
+        }
+
+        if (ae.getSource() == bAnual) {
+
+            RelatoriosAnual pRelatoriosAnuais = new RelatoriosAnual();
+            setVisible(false);
+            Janela.panelInicio(pRelatoriosAnuais);
+            pRelatoriosAnuais.setVisible(true);
         }
 
     }

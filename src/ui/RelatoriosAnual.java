@@ -85,6 +85,24 @@ public class RelatoriosAnual extends JPanel implements ActionListener {
         lValor.setForeground(new Color(110, 110, 110));
         add(lValor);
 
+        lContador = new JLabel("00");
+        lContador.setBounds(210, 110, 50, 24);
+        lContador.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
+        lContador.setForeground(new Color(110, 110, 110));
+        add(lContador);
+
+        lServico = new JLabel("Barba");
+        lServico.setBounds(270, 110, 100, 24);
+        lServico.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
+        lServico.setForeground(new Color(110, 110, 110));
+        add(lServico);
+
+        lValor = new JLabel("R$ 0,00");
+        lValor.setBounds(465, 110, 100, 24);
+        lValor.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
+        lValor.setForeground(new Color(110, 110, 110));
+        add(lValor);
+
         line = new JLabel();
         line.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/line1.png")));
         line.setBounds(600, 5, 889, 450);
@@ -110,6 +128,18 @@ public class RelatoriosAnual extends JPanel implements ActionListener {
 
         lContador = new JLabel("09");
         lContador.setBounds(830, 70, 50, 24);
+        lContador.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
+        lContador.setForeground(new Color(110, 110, 110));
+        add(lContador);
+
+        lBarbeiro = new JLabel("Sérgio");
+        lBarbeiro.setBounds(630, 110, 100, 24);
+        lBarbeiro.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
+        lBarbeiro.setForeground(new Color(110, 110, 110));
+        add(lBarbeiro);
+
+        lContador = new JLabel("10");
+        lContador.setBounds(830, 110, 50, 24);
         lContador.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
         lContador.setForeground(new Color(110, 110, 110));
         add(lContador);

@@ -121,7 +121,7 @@ public class Relatorios extends JPanel implements ActionListener {
 
         if (ae.getSource() == bMensal) {
 
-            RelatoriosMensal pRelatoriosMensais = new RelatoriosMensal();
+            RelatoriosMes pRelatoriosMensais = new RelatoriosMes();
             setVisible(false);
             Janela.panelInicio(pRelatoriosMensais);
             pRelatoriosMensais.setVisible(true);

@@ -125,7 +125,7 @@ public class Assinaturas extends JPanel implements ActionListener {
         // Cards aqui
 
         Cards cards = new Cards();
-        historico.add(cards.cardAdd());
+        historico.add(cards.cardAdd(this));
 
     }
 

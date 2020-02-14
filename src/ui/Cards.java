@@ -72,18 +72,27 @@ public class Cards extends JPanel implements ActionListener{
 
     /* Quadrado de adicionar */
 
-    JPanel cardAdd() {
+    JPanel cardAdd(JPanel panel) {
 
         setLayout(null);
-        setBounds(WIDTH / 20 + 300, HEIGHT / 4 - 20, 150, 150);
+        setBounds(WIDTH / 10, HEIGHT / 4 - 20, 100, 100);
 
         addButton = new JButton();
         addButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/add-icon.png")));
-        addButton.setBounds(0 , 0,150, 150);
+        addButton.setBounds(0 , 0,100, 100);
         addButton.setBorderPainted(false);
         addButton.setFocusPainted(false);
+        addButton.setBackground(new Color(234, 234, 234));
+        addButton.setForeground(new Color(234, 234, 234));
         add(addButton);
-        addButton.addActionListener(this);
+        addButton.addActionListener( new ActionListener(){
+            public void actionPerformed(ActionEvent e){
+                panel.setVisible(false);
+                AddAssinaturas addAssinaturas = new AddAssinaturas();
+                Janela.panelInicio(addAssinaturas);
+                addAssinaturas.setVisible(true);
+            }
+        });
 
         return this;
 

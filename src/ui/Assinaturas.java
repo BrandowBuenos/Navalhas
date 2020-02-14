@@ -13,6 +13,8 @@ public class Assinaturas extends JPanel implements ActionListener {
     private JPanel description;
     private JLabel customerIcon;
 
+    private JButton bVoltar;
+
     private JTextField tPesquisa;
     private JButton bPesquisa;
 
@@ -36,6 +38,15 @@ public class Assinaturas extends JPanel implements ActionListener {
         setBounds(45, 182, 1275, 460);
         setBackground(new Color(255, 255, 255));
         setLayout(null);
+
+        bVoltar = new JButton("<");
+        bVoltar.setBounds(150, 50, 50, 50);
+        bVoltar.setFont(new Font("Arial", Font.PLAIN, 20));
+        bVoltar.setForeground(new Color(205, 92, 92));
+        bVoltar.setBackground(new Color(255, 255, 255));
+        bVoltar.addActionListener(this);
+        add(bVoltar);
+
 
         description = new JPanel();
         description.setLayout(null);
@@ -120,6 +131,14 @@ public class Assinaturas extends JPanel implements ActionListener {
 
     public void actionPerformed(ActionEvent ae) {
 
+        if (ae.getSource() == bVoltar) {
+            
+            AddAssinaturas addAss = new AddAssinaturas();
+            setVisible(false);
+            Janela.panelInicio(addAss);
+            addAss.setVisible(true);
+
+        }
         
 
     }

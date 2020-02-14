@@ -42,7 +42,6 @@ public class Janela implements ActionListener {
         // Frame
 
         frame = new JFrame("Barbearia Navalhas");
-        frame.getContentPane().setBackground(new Color(247, 247, 247));
         frame.setSize(1366, 768);
         frame.setLayout(null);
         frame.setResizable(false);

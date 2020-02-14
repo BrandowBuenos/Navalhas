@@ -17,9 +17,6 @@ public class Relatorios extends JPanel implements ActionListener {
     private JButton bMensal;
     private JButton bAnual;
 
-    private final int WIDTH = (int) Toolkit.getDefaultToolkit().getScreenSize().getWidth();
-    private final int HEIGHT = (int) Toolkit.getDefaultToolkit().getScreenSize().getHeight();
-
     public Relatorios() {
 
         removeAll();

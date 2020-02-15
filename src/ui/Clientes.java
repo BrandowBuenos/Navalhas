@@ -9,8 +9,6 @@ import javax.swing.*;
  */
 
 public class Clientes extends JPanel implements ActionListener {
-    
-    private JButton bVoltar;
 
     private JPanel description;
     private JLabel customerIcon;
@@ -20,20 +18,14 @@ public class Clientes extends JPanel implements ActionListener {
     private JButton bEditarCliente;
     private JButton bExcluirCliente;
 
-   
+    Janela jan;
+
     public Clientes() {
 
-        //setBounds(46, 327, 1273, 145);
-        setBounds(45, 182, 1275, 460);
+        setBounds(46, 327, 1273, 145);
+        // setBounds(45, 182, 1275, 460);
         setBackground(new Color(255, 255, 255));
         setLayout(null);
-
-        bVoltar = new JButton("<");
-        bVoltar.setBounds(WIDTH/6, HEIGHT/4, WIDTH/32, HEIGHT/24);
-		bVoltar.setFont(new Font("Arial", Font.PLAIN, 20));
-        bVoltar.setForeground(new Color(205, 92, 92));
-        bVoltar.addActionListener(this);
-        add(bVoltar);
 
         description = new JPanel();
         description.setBounds(0, 0, 175, 145);
@@ -90,26 +82,14 @@ public class Clientes extends JPanel implements ActionListener {
         bExcluirCliente.addActionListener(this);
         add(bExcluirCliente);
 
-       
     }
 
     public void actionPerformed(ActionEvent ae) {
 
-        if (ae.getSource() == bVoltar) {
-           
-            Assinaturas ass = new Assinaturas();
-            setVisible(false);
-            Janela.panelInicio(ass);
-            ass.setVisible(true);
-        }
-
         if (ae.getSource() == bAddCliente) {
 
-            AddClientes pAddCliente = new AddClientes();
-            removeAll();
             setVisible(false);
-            Janela.panelInicio(pAddCliente);
-            pAddCliente.setVisible(true);
+            Janela.addCli.setVisible(true);
 
         }
 
@@ -132,7 +112,6 @@ public class Clientes extends JPanel implements ActionListener {
 
         if (ae.getSource() == bExcluirCliente) {
 
-          
             ExcluirClientes excClientes = new ExcluirClientes();
             setVisible(false);
             Janela.panelInicio(excClientes);

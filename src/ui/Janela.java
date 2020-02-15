@@ -4,7 +4,6 @@ import java.awt.*;
 import java.awt.event.*;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-
 import javax.swing.*;
 
 /**
@@ -12,22 +11,28 @@ import javax.swing.*;
  */
 public class Janela implements ActionListener {
 
-    public static JFrame frame;
-    public JLabel fundo;
-    public JLabel logo;
+    protected JFrame frame;
+    protected JLabel fundo;
+    protected JLabel logo;
 
-    public JPanel menu;
-    public JButton bClientes;
-    public JButton bAssinaturas;
-    public JButton bRelatorios;
+    protected JPanel menu;
+    protected JButton bClientes;
+    protected JButton bAssinaturas;
+    protected JButton bRelatorios;
 
-    public static JPanel panel;
+    public Clientes cli = new Clientes();
+    public static AddClientes addCli = new AddClientes();
+
+    public Assinaturas ass = new Assinaturas();
+    public Relatorios rel = new Relatorios();
+
+    private static JPanel panel;
     private JLabel message;
 
-    public JPanel rodape;
-    public JLabel whatsapp;
-    public JLabel instagram;
-    public JLabel facebook;
+    protected JPanel rodape;
+    protected JLabel whatsapp;
+    protected JLabel instagram;
+    protected JLabel facebook;
 
     public int width;
     public int height;
@@ -38,18 +43,39 @@ public class Janela implements ActionListener {
         Dimension d = tk.getScreenSize();
         width = (int) d.getWidth();
         height = (int) d.getHeight();
-        
-        // Frame
 
+        frame();
+        frame.getContentPane().add(cli);
+        frame.getContentPane().add(addCli);
+
+        frame.getContentPane().add(ass);
+        frame.getContentPane().add(rel);
+
+        cli.setVisible(false);
+        addCli.setVisible(false);
+
+        ass.setVisible(false);
+        rel.setVisible(false);
+
+        panel();
+        fundo();
+        logo();
+        menu();
+        rodape();
+
+        frame.setVisible(true);
+    }
+
+    private void frame() {
         frame = new JFrame("Barbearia Navalhas");
         frame.setSize(1366, 768);
         frame.setLayout(null);
         frame.setResizable(false);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLocationRelativeTo(null);
+    }
 
-        // Painel de conteudo (nesta posicao para nao atrapalhar na transparencia)
-
+    private void panel() {
         panel = new JPanel();
         panel.setBounds(45, 182, 1275, 460);
         panel.setBackground(new Color(255, 255, 255));
@@ -62,23 +88,23 @@ public class Janela implements ActionListener {
         message.setBounds(480, 230, 420, 25);
         message.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
         panel.add(message);
+    }
 
-        // Fundo
-
+    private void fundo() {
         fundo = new JLabel();
         fundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/background.png")));
         fundo.setBounds(0, 0, 1366, 768);
         frame.getContentPane().add(fundo);
+    }
 
-        // Logo
-
+    private void logo() {
         logo = new JLabel("");
         logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/logo.png")));
         logo.setBounds(52, 5, 160, 160);
         frame.getContentPane().add(logo);
+    }
 
-        // Menu
-
+    public void menu() {
         menu = new JPanel();
         menu.setBounds(276, 55, 1045, 56);
         menu.setBackground(new Color(34, 34, 34));
@@ -99,7 +125,7 @@ public class Janela implements ActionListener {
         bAssinaturas.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/signature-icon.png")));
         bAssinaturas.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
         bAssinaturas.setForeground(new Color(255, 255, 255));
-        bAssinaturas.setBounds(348,0,348,56);
+        bAssinaturas.setBounds(348, 0, 348, 56);
         bAssinaturas.setContentAreaFilled(false);
         bAssinaturas.setBorderPainted(false);
         bAssinaturas.setFocusable(false);
@@ -110,16 +136,16 @@ public class Janela implements ActionListener {
         bRelatorios.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/report-icon.png")));
         bRelatorios.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
         bRelatorios.setForeground(new Color(255, 255, 255));
-        bRelatorios.setBounds(696,0,348,56);
+        bRelatorios.setBounds(696, 0, 348, 56);
         bRelatorios.setContentAreaFilled(false);
         bRelatorios.setBorderPainted(false);
         bRelatorios.setFocusable(false);
         bRelatorios.addActionListener(this);
         menu.add(bRelatorios);
         frame.getContentPane().add(menu);
+    }
 
-        // Rodape
-
+    public void rodape() {
         whatsapp = new JLabel();
         whatsapp.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/whatsapp-icon.png")));
         whatsapp.setBounds(47, 705, 26, 26);
@@ -132,7 +158,7 @@ public class Janela implements ActionListener {
         frame.getContentPane().add(whatsapp);
 
         whatsapp = new JLabel("(94) 98146-2634");
-        whatsapp.setBounds(88, 718 , 140, 19);
+        whatsapp.setBounds(88, 718, 140, 19);
         whatsapp.setFont(new Font("Helvetica Neue", Font.PLAIN, 18));
         whatsapp.setForeground(new Color(255, 255, 255));
         frame.getContentPane().add(whatsapp);
@@ -156,8 +182,6 @@ public class Janela implements ActionListener {
         rodape.setBackground(new Color(34, 34, 34));
         rodape.setLayout(null);
         frame.getContentPane().add(rodape);
-
-        frame.setVisible(true);
     }
 
     public void actionPerformed(ActionEvent ae) {
@@ -165,33 +189,34 @@ public class Janela implements ActionListener {
         if (ae.getSource() == bClientes) {
 
             panel.setVisible(false);
-            panel.removeAll();
-            Clientes cli = new Clientes();
-            frame.getContentPane().add(cli);
             cli.setVisible(true);
+            ass.setVisible(false);
+            rel.setVisible(false);
+
         }
 
         if (ae.getSource() == bAssinaturas) {
 
             panel.setVisible(false);
-            Assinaturas ass = new Assinaturas();
-            frame.getContentPane().add(ass);
+            cli.setVisible(false);
             ass.setVisible(true);
+            rel.setVisible(false);
+
         }
 
         if (ae.getSource() == bRelatorios) {
 
             panel.setVisible(false);
-            Relatorios rel = new Relatorios();
-            frame.getContentPane().add(rel);
+            cli.setVisible(false);
+            ass.setVisible(false);
             rel.setVisible(true);
+
         }
 
     }
 
-    // Metodo para a correta mudança de paineis
+    // Metodo para a correta mudanca de paineis
     public static void panelInicio(JPanel j) {
-        frame.add(j);
         j.setVisible(true);
     }
 

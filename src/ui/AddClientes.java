@@ -147,10 +147,8 @@ public class AddClientes extends JPanel implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == bVoltar) {
 
-            Clientes clientes = new Clientes();
-            setVisible(false);
-            Janela.panelInicio(clientes);
-            clientes.setVisible(true);
+            this.setVisible(false);
+           // Inicio.panelInicio(in.cli);
 
         }
 

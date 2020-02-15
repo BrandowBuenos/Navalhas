@@ -8,7 +8,7 @@ import javax.swing.*;
  * Relatorios
  */
 public class RelatoriosSemanal extends JPanel implements ActionListener {
-    
+
     private JPanel description;
     private JLabel customerIcon;
 
@@ -19,7 +19,6 @@ public class RelatoriosSemanal extends JPanel implements ActionListener {
     private JLabel label;
 
     private JLabel lBarbeiro;
-    private JButton bVoltar;
 
     public RelatoriosSemanal() {
 
@@ -28,14 +27,6 @@ public class RelatoriosSemanal extends JPanel implements ActionListener {
         setBounds(45, 182, 1275, 460);
         setBackground(new Color(255, 255, 255));
         setLayout(null);
-
-        bVoltar = new JButton("<");
-        bVoltar.setBounds(150, 50, 50, 50);
-        bVoltar.setFont(new Font("Arial", Font.PLAIN, 20));
-        bVoltar.setForeground(new Color(205, 92, 92));
-        bVoltar.setBackground(new Color(255, 255, 255));
-        bVoltar.addActionListener(this);
-        add(bVoltar);
 
         description = new JPanel();
         description.setLayout(null);
@@ -49,23 +40,22 @@ public class RelatoriosSemanal extends JPanel implements ActionListener {
         description.add(customerIcon);
 
         label = new JLabel("Nº");
-        label.setBounds(210,10,55,55);
+        label.setBounds(210, 10, 55, 55);
         label.setForeground(new Color(47, 47, 47));
         label.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
         add(label);
 
         label = new JLabel("Serviço");
-        label.setBounds(270,10,100,55);
+        label.setBounds(270, 10, 100, 55);
         label.setForeground(new Color(47, 47, 47));
         label.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
         add(label);
 
         label = new JLabel("Total");
-        label.setBounds(465,10,100,55);
+        label.setBounds(465, 10, 100, 55);
         label.setForeground(new Color(47, 47, 47));
         label.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
         add(label);
-
 
         lContador = new JLabel("09");
         lContador.setBounds(210, 70, 50, 24);
@@ -109,13 +99,13 @@ public class RelatoriosSemanal extends JPanel implements ActionListener {
         add(line);
 
         label = new JLabel("Funcionário");
-        label.setBounds(630,10,150,55);
+        label.setBounds(630, 10, 150, 55);
         label.setForeground(new Color(47, 47, 47));
         label.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
         add(label);
 
         label = new JLabel("Nº de serviços");
-        label.setBounds(780,10,150,55);
+        label.setBounds(780, 10, 150, 55);
         label.setForeground(new Color(47, 47, 47));
         label.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
         add(label);
@@ -145,7 +135,7 @@ public class RelatoriosSemanal extends JPanel implements ActionListener {
         add(lContador);
 
         label = new JLabel("Clientes atendidos: 100");
-        label.setBounds(630,380,400,55);
+        label.setBounds(630, 380, 400, 55);
         label.setForeground(new Color(47, 47, 47));
         label.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
         add(label);
@@ -156,32 +146,20 @@ public class RelatoriosSemanal extends JPanel implements ActionListener {
         add(line);
 
         label = new JLabel("Total de Rendimentos");
-        label.setBounds(1010,180,400,55);
+        label.setBounds(1010, 180, 400, 55);
         label.setForeground(new Color(47, 47, 47));
         label.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
         add(label);
 
         label = new JLabel("R$ 20.000,00");
-        label.setBounds(1050,230,400,55);
+        label.setBounds(1050, 230, 400, 55);
         label.setForeground(new Color(47, 47, 47));
         label.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
         add(label);
-     
-
-       
 
     }
 
     public void actionPerformed(ActionEvent ae) {
-
-        if (ae.getSource() == bVoltar) {
-            
-            Relatorios rel = new Relatorios();
-            setVisible(false);
-            Janela.panelInicio(rel);
-            rel.setVisible(true);
-
-        }
 
     }
 

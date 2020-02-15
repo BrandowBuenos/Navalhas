@@ -20,11 +20,21 @@ public class Janela implements ActionListener {
     protected JButton bAssinaturas;
     protected JButton bRelatorios;
 
-    public Clientes cli = new Clientes();
-    public static AddClientes addCli = new AddClientes();
+    public AddClientes addCli = new AddClientes();
+    public ConsultarCliente conCli = new ConsultarCliente();
+    public EditarClientes ediCli = new EditarClientes();
+    public ExcluirClientes excCli = new ExcluirClientes();
+    public Clientes cli = new Clientes(addCli, conCli, ediCli, excCli);
 
-    public Assinaturas ass = new Assinaturas();
-    public Relatorios rel = new Relatorios();
+    public AddAssinaturas addAss = new AddAssinaturas();
+    public Assinaturas ass = new Assinaturas(addAss);
+
+    public RelatoriosAnual relAnu = new RelatoriosAnual();
+    public RelatoriosDiario relDia = new RelatoriosDiario();
+    public RelatoriosMensal relMen = new RelatoriosMensal();
+    public RelatoriosSemanal relSem = new RelatoriosSemanal();
+    public RelatoriosMes relMes = new RelatoriosMes(relMen);
+    public Relatorios rel = new Relatorios(relDia, relSem, relMes, relAnu);
 
     private static JPanel panel;
     private JLabel message;
@@ -47,15 +57,35 @@ public class Janela implements ActionListener {
         frame();
         frame.getContentPane().add(cli);
         frame.getContentPane().add(addCli);
+        frame.getContentPane().add(conCli);
+        frame.getContentPane().add(ediCli);
+        frame.getContentPane().add(excCli);
 
         frame.getContentPane().add(ass);
+        frame.getContentPane().add(addAss);
+
         frame.getContentPane().add(rel);
+        frame.getContentPane().add(relDia);
+        frame.getContentPane().add(relSem);
+        frame.getContentPane().add(relMes);
+        frame.getContentPane().add(relMen);
+        frame.getContentPane().add(relAnu);
 
         cli.setVisible(false);
         addCli.setVisible(false);
+        conCli.setVisible(false);
+        ediCli.setVisible(false);
+        excCli.setVisible(false);
 
         ass.setVisible(false);
+        addAss.setVisible(false);
+
         rel.setVisible(false);
+        relDia.setVisible(false);
+        relSem.setVisible(false);
+        relMes.setVisible(false);
+        relMen.setVisible(false);
+        relAnu.setVisible(false);
 
         panel();
         fundo();
@@ -189,28 +219,66 @@ public class Janela implements ActionListener {
         if (ae.getSource() == bClientes) {
 
             panel.setVisible(false);
+
             cli.setVisible(true);
+            addCli.setVisible(false);
+            conCli.setVisible(false);
+            ediCli.setVisible(false);
+            excCli.setVisible(false);
+
             ass.setVisible(false);
+            addAss.setVisible(false);
+
             rel.setVisible(false);
+            relDia.setVisible(false);
+            relSem.setVisible(false);
+            relMes.setVisible(false);
+            relMen.setVisible(false);
+            relAnu.setVisible(false);
 
         }
 
         if (ae.getSource() == bAssinaturas) {
 
             panel.setVisible(false);
+
             cli.setVisible(false);
+            addCli.setVisible(false);
+            conCli.setVisible(false);
+            ediCli.setVisible(false);
+            excCli.setVisible(false);
+
             ass.setVisible(true);
+            addAss.setVisible(false);
+
             rel.setVisible(false);
+            relDia.setVisible(false);
+            relSem.setVisible(false);
+            relMes.setVisible(false);
+            relMen.setVisible(false);
+            relAnu.setVisible(false);
 
         }
 
         if (ae.getSource() == bRelatorios) {
 
             panel.setVisible(false);
-            cli.setVisible(false);
-            ass.setVisible(false);
-            rel.setVisible(true);
 
+            cli.setVisible(false);
+            addCli.setVisible(false);
+            conCli.setVisible(false);
+            ediCli.setVisible(false);
+            excCli.setVisible(false);
+
+            ass.setVisible(false);
+            addAss.setVisible(false);
+
+            rel.setVisible(true);
+            relDia.setVisible(false);
+            relSem.setVisible(false);
+            relMes.setVisible(false);
+            relMen.setVisible(false);
+            relAnu.setVisible(false);
         }
 
     }

@@ -18,9 +18,18 @@ public class Clientes extends JPanel implements ActionListener {
     private JButton bEditarCliente;
     private JButton bExcluirCliente;
 
-    Janela jan;
+    JPanel addCli;
+    JPanel conCli;
+    JPanel ediCli;
+    JPanel excCli;
 
-    public Clientes() {
+    public Clientes(JPanel addCli, JPanel conCli, JPanel ediCli, JPanel excCli) {
+        this.addCli = addCli;
+        this.conCli = conCli;
+        this.ediCli = ediCli;
+        this.excCli = excCli;
+
+        removeAll();
 
         setBounds(46, 327, 1273, 145);
         // setBounds(45, 182, 1275, 460);
@@ -89,33 +98,27 @@ public class Clientes extends JPanel implements ActionListener {
         if (ae.getSource() == bAddCliente) {
 
             setVisible(false);
-            Janela.addCli.setVisible(true);
+            addCli.setVisible(true);
 
         }
 
         if (ae.getSource() == bConsultarCliente) {
 
-            ConsultarCliente conClientes = new ConsultarCliente();
             setVisible(false);
-            Janela.panelInicio(conClientes);
-            conClientes.setVisible(true);
+            conCli.setVisible(true);
 
         }
 
         if (ae.getSource() == bEditarCliente) {
 
-            EditarClientes edtClientes = new EditarClientes();
             setVisible(false);
-            Janela.panelInicio(edtClientes);
-            edtClientes.setVisible(true);
+            ediCli.setVisible(true);
         }
 
         if (ae.getSource() == bExcluirCliente) {
 
-            ExcluirClientes excClientes = new ExcluirClientes();
             setVisible(false);
-            Janela.panelInicio(excClientes);
-            excClientes.setVisible(true);
+            excCli.setVisible(true);
         }
 
     }

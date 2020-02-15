@@ -17,7 +17,6 @@ public class AddClientes extends JPanel implements ActionListener {
     private JPanel description;
     private JLabel customerIcon;
 
-    private JButton bVoltar;
     private JButton bConfirmar;
     private JButton bFoto;
 
@@ -28,9 +27,6 @@ public class AddClientes extends JPanel implements ActionListener {
     private JTextField tContato2;
 
     private JButton bBiometria;
-
-    private final int WIDTH = (int) Toolkit.getDefaultToolkit().getScreenSize().getWidth();
-    private final int HEIGHT = (int) Toolkit.getDefaultToolkit().getScreenSize().getHeight();
 
     public AddClientes() {
 
@@ -133,24 +129,10 @@ public class AddClientes extends JPanel implements ActionListener {
         bConfirmar.addActionListener(this);
         add(bConfirmar);
 
-        bVoltar = new JButton("<");
-        bVoltar.setBounds(230, 50, 50, 50);
-        bVoltar.setFont(new Font("Arial", Font.PLAIN, 20));
-        bVoltar.setForeground(new Color(205, 92, 92));
-        bVoltar.setBackground(new Color(255, 255, 255));
-        bVoltar.addActionListener(this);
-        add(bVoltar);
-
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (e.getSource() == bVoltar) {
-
-            this.setVisible(false);
-           // Inicio.panelInicio(in.cli);
-
-        }
 
         if (e.getSource() == bFoto) {
 

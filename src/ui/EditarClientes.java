@@ -9,7 +9,6 @@ import java.util.List;
 
 import java.awt.event.*;
 
-
 /**
  * ExcluirClientes
  */
@@ -31,13 +30,13 @@ public class EditarClientes extends JPanel implements ActionListener {
     private JButton bLimpar;
     private JButton bEnviar;
     private JButton bConfirmar;
-    
+
     private final int WIDTH = 1366;
     private final int HEIGHT = 768;
     private ClienteDAO clienteDAO = new ClienteDAO();
 
     public EditarClientes() {
-        
+
         setBounds(45, 182, 1275, 460);
         setBackground(new Color(255, 255, 255));
         setLayout(null);
@@ -53,58 +52,45 @@ public class EditarClientes extends JPanel implements ActionListener {
         customerIcon.setBounds(65, 196, 50, 45);
         description.add(customerIcon);
 
-       
         lClientes = new JLabel("Editar Cliente");
-		lClientes.setBounds(WIDTH/2 - WIDTH/20, WIDTH/14, WIDTH/5, WIDTH/32);
-		lClientes.setFont(new Font("Helvetica Neue", Font.PLAIN, 30));
-		lClientes.setForeground(new Color(128, 128, 128));
-		add(lClientes);
+        lClientes.setBounds(WIDTH / 2 - WIDTH / 20, WIDTH / 14, WIDTH / 5, WIDTH / 32);
+        lClientes.setFont(new Font("Helvetica Neue", Font.PLAIN, 30));
+        lClientes.setForeground(new Color(128, 128, 128));
+        add(lClientes);
 
-		lConsultaNome = new JLabel("Nome");
-		lConsultaNome.setBounds(WIDTH/2 - WIDTH/5, HEIGHT/5 + HEIGHT/15, WIDTH/5, HEIGHT/27);
-		lConsultaNome.setFont(new Font("Helvetica Neue", Font.PLAIN, 23));
-		lConsultaNome.setForeground(new Color(128, 128, 128));
-		add(lConsultaNome);
+        lConsultaNome = new JLabel("Nome");
+        lConsultaNome.setBounds(WIDTH / 2 - WIDTH / 5, HEIGHT / 5 + HEIGHT / 15, WIDTH / 5, HEIGHT / 27);
+        lConsultaNome.setFont(new Font("Helvetica Neue", Font.PLAIN, 23));
+        lConsultaNome.setForeground(new Color(128, 128, 128));
+        add(lConsultaNome);
 
-		tConsultaNome = new JTextField("");
-        tConsultaNome.setBounds(WIDTH/2 - WIDTH/8, HEIGHT/5 + HEIGHT/15, WIDTH/4 + WIDTH/15, HEIGHT/16);
+        tConsultaNome = new JTextField("");
+        tConsultaNome.setBounds(WIDTH / 2 - WIDTH / 8, HEIGHT / 5 + HEIGHT / 15, WIDTH / 4 + WIDTH / 15, HEIGHT / 16);
         tConsultaNome.setFont(new Font("Helvetica Neue", Font.PLAIN, 25));
         tConsultaNome.setForeground(new Color(131, 131, 131));
-		//tConsultaCpf.setDocument(new Tratamento());
-		add(tConsultaNome);
+        // tConsultaCpf.setDocument(new Tratamento());
+        add(tConsultaNome);
 
-		bVoltar = new JButton("<");
-        bVoltar.setBounds(230, 50, 50, 50);
-        bVoltar.setFont(new Font("Arial", Font.PLAIN, 20));
-        bVoltar.setForeground(new Color(205, 92, 92));
-        bVoltar.setBackground(new Color(255, 255, 255));
-		bVoltar.addActionListener(this);
-		add(bVoltar);
-
-		bEnviar = new JButton("Enviar");
-		bEnviar.setBounds(WIDTH/2 + WIDTH/40 + WIDTH/32, HEIGHT/3 + HEIGHT/15, WIDTH/10, HEIGHT/16);
-		bEnviar.setFont(new Font("Helvetica Neue", Font.PLAIN, 20));
+        bEnviar = new JButton("Enviar");
+        bEnviar.setBounds(WIDTH / 2 + WIDTH / 40 + WIDTH / 32, HEIGHT / 3 + HEIGHT / 15, WIDTH / 10, HEIGHT / 16);
+        bEnviar.setFont(new Font("Helvetica Neue", Font.PLAIN, 20));
         bEnviar.addActionListener(this);
         bEnviar.setBackground(new Color(255, 255, 255));
-		bEnviar.setForeground(new Color(0, 128, 128));
-		add(bEnviar);
+        bEnviar.setForeground(new Color(0, 128, 128));
+        add(bEnviar);
 
-		bLimpar = new JButton("Limpar");
-		bLimpar.setBounds(WIDTH/3 + WIDTH/12, HEIGHT/3 + HEIGHT/15,WIDTH/10, HEIGHT/16);
-		bLimpar.setFont(new Font("Helvetica Neue", Font.PLAIN, 20));
+        bLimpar = new JButton("Limpar");
+        bLimpar.setBounds(WIDTH / 3 + WIDTH / 12, HEIGHT / 3 + HEIGHT / 15, WIDTH / 10, HEIGHT / 16);
+        bLimpar.setFont(new Font("Helvetica Neue", Font.PLAIN, 20));
         bLimpar.setForeground(new Color(205, 92, 92));
         bLimpar.setBackground(new Color(255, 255, 255));
-		bLimpar.addActionListener(this);
-		add(bLimpar);
-
+        bLimpar.addActionListener(this);
+        add(bLimpar);
 
     }
 
-
-
     void resultadoConsulta(Cliente cliente) {
-        
- 
+
         JButton bFoto = new JButton();
         bFoto.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/picture-customer.png")));
         bFoto.setBounds(770, 40, 120, 120);
@@ -115,13 +101,13 @@ public class EditarClientes extends JPanel implements ActionListener {
         add(bFoto);
 
         JLabel nome = new JLabel("Nome");
-        nome.setBounds(WIDTH/3 + WIDTH/13, WIDTH/15, WIDTH/10, WIDTH/32);
+        nome.setBounds(WIDTH / 3 + WIDTH / 13, WIDTH / 15, WIDTH / 10, WIDTH / 32);
         nome.setFont(new Font("Helvetica Neue", Font.PLAIN, 25));
         nome.setForeground(new Color(131, 131, 131));
         add(nome);
 
         tNome = new JTextField(cliente.getNome());
-        tNome.setBounds(WIDTH/3 + WIDTH/13, WIDTH/10, WIDTH/4, WIDTH/32);
+        tNome.setBounds(WIDTH / 3 + WIDTH / 13, WIDTH / 10, WIDTH / 4, WIDTH / 32);
         tNome.setEditable(false);
         tNome.setFont(new Font("Helvetica Neue", Font.PLAIN, 23));
         tNome.setForeground(new Color(47, 47, 47));
@@ -133,7 +119,7 @@ public class EditarClientes extends JPanel implements ActionListener {
         contatos.setForeground(new Color(131, 131, 131));
         add(contatos);
 
-        tDDDContato1 = new JTextField(cliente.getContato1().substring(0,1));
+        tDDDContato1 = new JTextField(cliente.getContato1().substring(0, 1));
         tDDDContato1.setBounds(600, 350, 70, 60);
         tDDDContato1.setFont(new Font("Helvetica Neue", Font.PLAIN, 23));
         tDDDContato1.setForeground(new Color(47, 47, 47));
@@ -145,7 +131,7 @@ public class EditarClientes extends JPanel implements ActionListener {
         tContato1.setForeground(new Color(47, 47, 47));
         add(tContato1);
 
-        tDDDContato2 = new JTextField(cliente.getContato2().substring(0,1));
+        tDDDContato2 = new JTextField(cliente.getContato2().substring(0, 1));
         tDDDContato2.setBounds(600, 430, 70, 60);
         tDDDContato2.setFont(new Font("Helvetica Neue", Font.PLAIN, 23));
         tDDDContato2.setForeground(new Color(47, 47, 47));
@@ -182,51 +168,39 @@ public class EditarClientes extends JPanel implements ActionListener {
     public void actionPerformed(ActionEvent e) {
 
         if (e.getSource() == bEnviar) {
-            String nomePesquisado =tConsultaNome.getText().trim();
+            String nomePesquisado = tConsultaNome.getText().trim();
             List<Cliente> listaClientes = clienteDAO.read();
             Cliente clientePesquisado = null;
-            
+
             for (Cliente cliente : listaClientes) {
                 String nomeCliente = cliente.getNome().trim();
-                
+
                 if (nomePesquisado.equalsIgnoreCase(nomeCliente)) {
                     clientePesquisado = cliente;
-                }   
+                }
             }
 
             if (clientePesquisado != null) {
                 System.out.println(clientePesquisado.getContato1());
-                
+
                 resultadoConsulta(clientePesquisado);
-            }else{
+            } else {
                 System.out.println("Cliente nao encontrado");
             }
-		}
+        }
 
-				
-
-		if (e.getSource() == bLimpar) {
-			//tConsultaNome.setText("")
+        if (e.getSource() == bLimpar) {
+            // tConsultaNome.setText("")
 
         }
 
         if (e.getSource() == bConfirmar) {
             Cliente updateCliente = new Cliente();
             updateCliente.setNome(tNome.getText());
-            updateCliente.setContato1(tDDDContato1.getText()+" "+tContato1.getText());
-            updateCliente.setContato2(tDDDContato2.getText()+" "+tContato2.getText());
+            updateCliente.setContato1(tDDDContato1.getText() + " " + tContato1.getText());
+            updateCliente.setContato2(tDDDContato2.getText() + " " + tContato2.getText());
             clienteDAO.update(updateCliente);
         }
-        
-        if (e.getSource() == bVoltar) {
-            
-            Clientes clientes = new Clientes();
-            setVisible(false);
-            Janela.panelInicio(clientes);
-            clientes.setVisible(true);
-        }
-
-	
 
     }
 }

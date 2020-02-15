@@ -44,7 +44,7 @@ public class AddAssinaturas extends JPanel implements ActionListener {
     private JCheckBox barb4;
 
     private JLabel lFormaPagamento;
-    
+
     private JCheckBox dinheiro;
     private JCheckBox cartao;
 
@@ -89,7 +89,6 @@ public class AddAssinaturas extends JPanel implements ActionListener {
         lData.setForeground(new Color(110, 110, 110));
         add(lData);
 
-
         // Tabela
 
         tabela = new JLabel();
@@ -103,12 +102,11 @@ public class AddAssinaturas extends JPanel implements ActionListener {
         total.setForeground(new Color(110, 110, 110));
         add(total);
 
-
         // Corte
 
         bRemoveIcon = new JButton();
         bRemoveIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/signatures-remove-icon.png")));
-        bRemoveIcon.setBounds(230, 130, 22,22);
+        bRemoveIcon.setBounds(230, 130, 22, 22);
         bRemoveIcon.setContentAreaFilled(false);
         bRemoveIcon.setBorderPainted(false);
         bRemoveIcon.setFocusable(false);
@@ -180,7 +178,7 @@ public class AddAssinaturas extends JPanel implements ActionListener {
         tValorSombrancelha.setHorizontalAlignment(JTextField.CENTER);
         tValorSombrancelha.setFont(new Font("Helvetica Neue", Font.PLAIN, 19));
         add(tValorSombrancelha);
-    
+
         // Coloracao
 
         bAddIcon = new JButton();
@@ -259,7 +257,6 @@ public class AddAssinaturas extends JPanel implements ActionListener {
         tValorSelagem.setFont(new Font("Helvetica Neue", Font.PLAIN, 19));
         add(tValorSelagem);
 
-
         // Relaxamento
 
         bAddIcon = new JButton();
@@ -311,7 +308,6 @@ public class AddAssinaturas extends JPanel implements ActionListener {
         tValorLuzes.setHorizontalAlignment(JTextField.CENTER);
         tValorLuzes.setFont(new Font("Helvetica Neue", Font.PLAIN, 19));
         add(tValorLuzes);
-
 
         // Barbeiros
 

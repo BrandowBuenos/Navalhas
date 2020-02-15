@@ -6,7 +6,7 @@ import javax.swing.*;
  * Inicio
  */
 public class Inicio extends JFrame {
-   
+
     Janela jan;
 
     public Inicio() {

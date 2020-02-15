@@ -19,7 +19,6 @@ public class RelatoriosMensal extends JPanel implements ActionListener {
     private JLabel label;
 
     private JLabel lBarbeiro;
-    private JButton bVoltar;
 
     public RelatoriosMensal() {
 
@@ -28,14 +27,6 @@ public class RelatoriosMensal extends JPanel implements ActionListener {
         setBounds(45, 182, 1275, 460);
         setBackground(new Color(255, 255, 255));
         setLayout(null);
-
-        bVoltar = new JButton("<");
-        bVoltar.setBounds(150, 50, 50, 50);
-        bVoltar.setFont(new Font("Arial", Font.PLAIN, 20));
-        bVoltar.setForeground(new Color(205, 92, 92));
-        bVoltar.setBackground(new Color(255, 255, 255));
-        bVoltar.addActionListener(this);
-        add(bVoltar);
 
         description = new JPanel();
         description.setLayout(null);
@@ -173,15 +164,6 @@ public class RelatoriosMensal extends JPanel implements ActionListener {
     }
 
     public void actionPerformed(ActionEvent ae) {
-
-        if (ae.getSource() == bVoltar) {
-            
-            Relatorios rel = new Relatorios();
-            setVisible(false);
-            Janela.panelInicio(rel);
-            rel.setVisible(true);
-
-        }
 
     }
 

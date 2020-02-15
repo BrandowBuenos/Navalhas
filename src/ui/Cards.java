@@ -7,8 +7,7 @@ import javax.swing.*;
 /**
  * cards
  */
-public class Cards extends JPanel implements ActionListener{
-
+public class Cards extends JPanel implements ActionListener {
 
     private JLabel statusIcon;
 
@@ -21,6 +20,12 @@ public class Cards extends JPanel implements ActionListener{
     private final int HEIGHT = (int) Toolkit.getDefaultToolkit().getScreenSize().getHeight();
 
     Assinaturas ass;
+
+    JPanel addAss;
+
+    public Cards(JPanel addAss) {
+        this.addAss = addAss;
+    }
 
     JPanel cardConfirmado() {
 
@@ -79,18 +84,16 @@ public class Cards extends JPanel implements ActionListener{
 
         addButton = new JButton();
         addButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/add-icon.png")));
-        addButton.setBounds(0 , 0,100, 100);
+        addButton.setBounds(0, 0, 100, 100);
         addButton.setBorderPainted(false);
         addButton.setFocusPainted(false);
         addButton.setBackground(new Color(234, 234, 234));
         addButton.setForeground(new Color(234, 234, 234));
         add(addButton);
-        addButton.addActionListener( new ActionListener(){
-            public void actionPerformed(ActionEvent e){
-                panel.setVisible(false);
-                AddAssinaturas addAssinaturas = new AddAssinaturas();
-                Janela.panelInicio(addAssinaturas);
-                addAssinaturas.setVisible(true);
+        addButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                setVisible(false);
+                addAss.setVisible(true);
             }
         });
 
@@ -102,10 +105,8 @@ public class Cards extends JPanel implements ActionListener{
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == addButton) {
 
-            AddAssinaturas addAssinaturas = new AddAssinaturas();
-            ass.setVisible(false);
-            Janela.panelInicio(addAssinaturas);
-            addAssinaturas.setVisible(true);
+            setVisible(false);
+            addAss.setVisible(true);
         }
 
     }

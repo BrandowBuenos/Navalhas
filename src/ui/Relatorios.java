@@ -17,7 +17,17 @@ public class Relatorios extends JPanel implements ActionListener {
     private JButton bMensal;
     private JButton bAnual;
 
-    public Relatorios() {
+    JPanel relDia;
+    JPanel relSem;
+    JPanel relMes;
+    JPanel relMen;
+    JPanel relAnu;
+
+    public Relatorios(JPanel relDia, JPanel relSem, JPanel relMes, JPanel relAnu) {
+        this.relDia = relDia;
+        this.relSem = relSem;
+        this.relMes = relMes;
+        this.relAnu = relAnu;
 
         removeAll();
 
@@ -110,34 +120,26 @@ public class Relatorios extends JPanel implements ActionListener {
 
         if (ae.getSource() == bDiario) {
 
-            RelatoriosDiario pRelatoriosDiarios = new RelatoriosDiario();
             setVisible(false);
-            Janela.panelInicio(pRelatoriosDiarios);
-            pRelatoriosDiarios.setVisible(true);
+            relDia.setVisible(true);
         }
 
         if (ae.getSource() == bSemanal) {
 
-            RelatoriosSemanal pRelatoriosSemanal = new RelatoriosSemanal();
             setVisible(false);
-            Janela.panelInicio(pRelatoriosSemanal);
-            pRelatoriosSemanal.setVisible(true);
+            relSem.setVisible(true);
         }
 
         if (ae.getSource() == bMensal) {
 
-            RelatoriosMes pRelatoriosMensais = new RelatoriosMes();
             setVisible(false);
-            Janela.panelInicio(pRelatoriosMensais);
-            pRelatoriosMensais.setVisible(true);
+            relMes.setVisible(true);
         }
 
         if (ae.getSource() == bAnual) {
 
-            RelatoriosAnual pRelatoriosAnuais = new RelatoriosAnual();
             setVisible(false);
-            Janela.panelInicio(pRelatoriosAnuais);
-            pRelatoriosAnuais.setVisible(true);
+            relAnu.setVisible(true);
         }
 
     }

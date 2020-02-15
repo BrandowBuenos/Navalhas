@@ -25,7 +25,10 @@ public class RelatoriosMes extends JPanel implements ActionListener {
     private JButton bNovembro;
     private JButton bDezembro;
 
-    public RelatoriosMes() {
+    JPanel relMen;
+
+    public RelatoriosMes(JPanel relMen) {
+        this.relMen = relMen;
 
         removeAll();
 
@@ -248,25 +251,14 @@ public class RelatoriosMes extends JPanel implements ActionListener {
         lDezembro.setBounds(55, 30, 120, 23);
         bDezembro.add(lDezembro);
 
-
     }
 
     public void actionPerformed(ActionEvent ae) {
 
         if (ae.getSource() == bJaneiro) {
 
-            RelatoriosMensal pRelatoriosMensal = new RelatoriosMensal();
             setVisible(false);
-            Janela.panelInicio(pRelatoriosMensal);
-            pRelatoriosMensal.setVisible(true);
-        }
-
-        if (ae.getSource() == bFevereiro) {
-
-            RelatoriosMensal pRelatoriosMensais = new RelatoriosMensal();
-            setVisible(false);
-            Janela.panelInicio(pRelatoriosMensais);
-            pRelatoriosMensais.setVisible(true);
+            relMen.setVisible(true);
         }
 
     }

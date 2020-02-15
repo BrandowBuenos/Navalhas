@@ -29,11 +29,13 @@ public class Assinaturas extends JPanel implements ActionListener {
     private JLabel lQtdServicos;
     private JLabel lQtdServicosGratis;
 
-
     private final int WIDTH = (int) Toolkit.getDefaultToolkit().getScreenSize().getWidth();
     private final int HEIGHT = (int) Toolkit.getDefaultToolkit().getScreenSize().getHeight();
 
-    public Assinaturas() {
+    JPanel addAss;
+
+    public Assinaturas(JPanel addAss) {
+        this.addAss = addAss;
 
         setBounds(45, 182, 1275, 460);
         setBackground(new Color(255, 255, 255));
@@ -46,7 +48,6 @@ public class Assinaturas extends JPanel implements ActionListener {
         bVoltar.setBackground(new Color(255, 255, 255));
         bVoltar.addActionListener(this);
         add(bVoltar);
-
 
         description = new JPanel();
         description.setLayout(null);
@@ -121,10 +122,9 @@ public class Assinaturas extends JPanel implements ActionListener {
         lQtdServicosGratis.setForeground(new Color(110, 110, 110));
         historico.add(lQtdServicosGratis);
 
-
         // Cards aqui
 
-        Cards cards = new Cards();
+        Cards cards = new Cards(addAss);
         historico.add(cards.cardAdd(this));
 
     }
@@ -132,14 +132,11 @@ public class Assinaturas extends JPanel implements ActionListener {
     public void actionPerformed(ActionEvent ae) {
 
         if (ae.getSource() == bVoltar) {
-            
-            AddAssinaturas addAss = new AddAssinaturas();
+
             setVisible(false);
-            Janela.panelInicio(addAss);
             addAss.setVisible(true);
 
         }
-        
 
     }
 

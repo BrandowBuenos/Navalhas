@@ -83,6 +83,64 @@ public class ExcluirClientes extends JPanel implements ActionListener {
 
     }
 
+    void resultadoConsulta() {
+
+        description = new JPanel();
+        description.setBounds(0, 0, 175, 460);
+        description.setBackground(new Color(234, 234, 234));
+        description.setLayout(null);
+        add(description);
+
+        customerIcon = new JLabel();
+        customerIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/customer-delete.png")));
+        customerIcon.setBounds(65, 196, 50, 45);
+        description.add(customerIcon);
+
+        JLabel label = new JLabel("Você está prestes a excluir ");
+        label.setBounds(280, 220, 300, 22);
+        label.setFont(new Font("Helvetica Neue", Font.PLAIN, 22));
+        label.setForeground(new Color(131, 131, 131));
+        add(label);
+
+        JLabel bFoto = new JLabel();
+        bFoto.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/picture-customer.png")));
+        bFoto.setBounds(620, 180, 100, 100);
+        add(bFoto);
+
+        JLabel nome = new JLabel("Nome");
+        nome.setBounds(720, 220, 80, 22);
+        nome.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
+        nome.setForeground(new Color(131, 131, 131));
+        add(nome);
+
+       
+        label = new JLabel(" deseja mesmo continuar ? ");
+        label.setBounds(710, 385, 280, 50);
+        label.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
+        label.setForeground(new Color(47, 47, 47));
+        add(label);
+
+
+        JButton bCancelar = new JButton();
+        bCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/cancel-button.png")));
+        bCancelar.setBounds(1080, 385, 58, 58);
+        bCancelar.setContentAreaFilled(false);
+        bCancelar.setBorderPainted(false);
+        bCancelar.setFocusable(false);
+        bCancelar.addActionListener(this);
+        add(bCancelar);
+
+        JButton bConfirmar = new JButton();
+        bConfirmar.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/confirm-button.png")));
+        bConfirmar.setBounds(1135, 385, 120, 60);
+        bConfirmar.setContentAreaFilled(false);
+        bConfirmar.setBorderPainted(false);
+        bConfirmar.setFocusable(false);
+        bConfirmar.addActionListener(this);
+        add(bConfirmar);
+        repaint();
+    }
+
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == bEnviar) {
@@ -95,6 +153,8 @@ public class ExcluirClientes extends JPanel implements ActionListener {
 
                 if (nomePesquisado.equalsIgnoreCase(nomeCliente)) {
                     clientePesquisado = cliente;
+                    removeAll();
+                    resultadoConsulta();
                 }
             }
 
@@ -104,6 +164,8 @@ public class ExcluirClientes extends JPanel implements ActionListener {
             } else {
                 System.out.println("Cliente nao encontrado");
             }
+
+        
         }
 
         if (e.getSource() == bLimpar) {

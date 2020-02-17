@@ -17,6 +17,7 @@ public class EditarClientes extends JPanel implements ActionListener {
     private JPanel description;
     private JLabel customerIcon;
 
+    private JButton bFoto;
     private JLabel lClientes;
     private JLabel lConsultaNome;
     private JTextField tConsultaNome;
@@ -26,7 +27,6 @@ public class EditarClientes extends JPanel implements ActionListener {
     private JTextField tDDDContato2;
     private JTextField tContato2;
 
-    private JButton bVoltar;
     private JButton bLimpar;
     private JButton bEnviar;
     private JButton bConfirmar;
@@ -91,9 +91,20 @@ public class EditarClientes extends JPanel implements ActionListener {
 
     void resultadoConsulta(Cliente cliente) {
 
-        JButton bFoto = new JButton();
+        description = new JPanel();
+        description.setBounds(0, 0, 175, 460);
+        description.setBackground(new Color(234, 234, 234));
+        description.setLayout(null);
+        add(description);
+
+        customerIcon = new JLabel();
+        customerIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/customer-edit.png")));
+        customerIcon.setBounds(65, 196, 50, 45);
+        description.add(customerIcon);
+
+        bFoto = new JButton();
         bFoto.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/picture-customer.png")));
-        bFoto.setBounds(770, 40, 120, 120);
+        bFoto.setBounds(605, 20, 100, 100);
         bFoto.setContentAreaFilled(false);
         bFoto.setBorderPainted(false);
         bFoto.setFocusable(false);
@@ -101,51 +112,50 @@ public class EditarClientes extends JPanel implements ActionListener {
         add(bFoto);
 
         JLabel nome = new JLabel("Nome");
-        nome.setBounds(WIDTH / 3 + WIDTH / 13, WIDTH / 15, WIDTH / 10, WIDTH / 32);
-        nome.setFont(new Font("Helvetica Neue", Font.PLAIN, 25));
+        nome.setBounds(500, 170, 80, 22);
+        nome.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
         nome.setForeground(new Color(131, 131, 131));
         add(nome);
 
-        tNome = new JTextField(cliente.getNome());
-        tNome.setBounds(WIDTH / 3 + WIDTH / 13, WIDTH / 10, WIDTH / 4, WIDTH / 32);
-        tNome.setEditable(false);
-        tNome.setFont(new Font("Helvetica Neue", Font.PLAIN, 23));
+        tNome = new JTextField("");
+        tNome.setBounds(500, 210, 320, 50);
+        tNome.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
         tNome.setForeground(new Color(47, 47, 47));
         add(tNome);
 
         JLabel contatos = new JLabel("Contatos");
-        contatos.setBounds(600, 270, 200, 60);
-        contatos.setFont(new Font("Helvetica Neue", Font.PLAIN, 25));
+        contatos.setBounds(500, 280, 120, 22);
+        contatos.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
         contatos.setForeground(new Color(131, 131, 131));
         add(contatos);
 
-        tDDDContato1 = new JTextField(cliente.getContato1().substring(0, 1));
-        tDDDContato1.setBounds(600, 350, 70, 60);
-        tDDDContato1.setFont(new Font("Helvetica Neue", Font.PLAIN, 23));
+        tDDDContato1 = new JTextField("");
+        tDDDContato1.setBounds(500, 320, 65, 50);
+        tDDDContato1.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
         tDDDContato1.setForeground(new Color(47, 47, 47));
         add(tDDDContato1);
 
-        tContato1 = new JTextField(4);
-        tContato1.setBounds(687, 350, 362, 60);
-        tContato1.setFont(new Font("Helvetica Neue", Font.PLAIN, 23));
+        tContato1 = new JTextField("");
+        tContato1.setBounds(580, 320, 240, 50);
+        tContato1.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
         tContato1.setForeground(new Color(47, 47, 47));
         add(tContato1);
 
-        tDDDContato2 = new JTextField(cliente.getContato2().substring(0, 1));
-        tDDDContato2.setBounds(600, 430, 70, 60);
+        tDDDContato2 = new JTextField("");
+        tDDDContato2.setBounds(500, 385, 65, 50);
         tDDDContato2.setFont(new Font("Helvetica Neue", Font.PLAIN, 23));
         tDDDContato2.setForeground(new Color(47, 47, 47));
         add(tDDDContato2);
 
-        tContato2 = new JTextField(cliente.getContato2().substring(4));
-        tContato2.setBounds(687, 430, 362, 60);
+        tContato2 = new JTextField("");
+        tContato2.setBounds(580, 385, 240, 50);
         tContato2.setFont(new Font("Helvetica Neue", Font.PLAIN, 23));
         tContato2.setForeground(new Color(47, 47, 47));
         add(tContato2);
 
         JButton bCancelar = new JButton();
         bCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/cancel-button.png")));
-        bCancelar.setBounds(1520, 420, 80, 80);
+        bCancelar.setBounds(1080, 385, 58, 58);
         bCancelar.setContentAreaFilled(false);
         bCancelar.setBorderPainted(false);
         bCancelar.setFocusable(false);
@@ -154,7 +164,7 @@ public class EditarClientes extends JPanel implements ActionListener {
 
         bConfirmar = new JButton();
         bConfirmar.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/confirm-button.png")));
-        bConfirmar.setBounds(1600, 420, 160, 80);
+        bConfirmar.setBounds(1135, 385, 120, 60);
         bConfirmar.setContentAreaFilled(false);
         bConfirmar.setBorderPainted(false);
         bConfirmar.setFocusable(false);
@@ -183,10 +193,13 @@ public class EditarClientes extends JPanel implements ActionListener {
             if (clientePesquisado != null) {
                 System.out.println(clientePesquisado.getContato1());
 
+                removeAll();
                 resultadoConsulta(clientePesquisado);
             } else {
                 System.out.println("Cliente nao encontrado");
             }
+
+          
         }
 
         if (e.getSource() == bLimpar) {

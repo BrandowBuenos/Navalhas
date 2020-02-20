@@ -395,14 +395,28 @@ public class RelatoriosDiario extends JPanel implements ActionListener {
         //
 
     
-        label = new JLabel("Total de Rendimentos");
-        label.setBounds(850, 330, 400, 55);
+        label = new JLabel("Rendimentos");
+        label.setBounds(630, 280, 400, 55);
         label.setForeground(new Color(47, 47, 47));
-        label.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
+        label.setFont(new Font("Helvetica Neue", Font.PLAIN, 23));
         add(label);
 
         label = new JLabel("R$ 20.000,00");
-        label.setBounds(900, 380, 400, 55);
+        label.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/credit-card-icon.png")));
+        label.setBounds(630, 340, 400, 55);
+        label.setForeground(new Color(47, 47, 47));
+        label.setFont(new Font("Helvetica Neue", Font.PLAIN, 19));
+        add(label);
+
+        label = new JLabel("R$ 20.000,00");
+        label.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/money-icon.png")));
+        label.setBounds(630, 390, 400, 55);
+        label.setForeground(new Color(47, 47, 47));
+        label.setFont(new Font("Helvetica Neue", Font.PLAIN, 19));
+        add(label);
+
+        label = new JLabel("Total: R$ 40.000,00");
+        label.setBounds(900, 370, 400, 55);
         label.setForeground(new Color(47, 47, 47));
         label.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
         add(label);

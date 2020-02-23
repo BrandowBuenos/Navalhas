@@ -394,29 +394,54 @@ public class RelatoriosDiario extends JPanel implements ActionListener {
 
         //
 
+        line = new JLabel();
+        line.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/horizontal-division-line.png")));
+        line.setBounds(600, 250, 889, 2);
+        add(line);
+
     
         label = new JLabel("Rendimentos");
-        label.setBounds(630, 280, 400, 55);
+        label.setBounds(630, 270, 400, 55);
         label.setForeground(new Color(47, 47, 47));
-        label.setFont(new Font("Helvetica Neue", Font.PLAIN, 23));
+        label.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
         add(label);
 
-        label = new JLabel("R$ 20.000,00");
+        label = new JLabel();
         label.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/credit-card-icon.png")));
-        label.setBounds(630, 340, 400, 55);
-        label.setForeground(new Color(47, 47, 47));
-        label.setFont(new Font("Helvetica Neue", Font.PLAIN, 19));
+        label.setBounds(680, 330, 400, 55);
         add(label);
 
         label = new JLabel("R$ 20.000,00");
-        label.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/money-icon.png")));
-        label.setBounds(630, 390, 400, 55);
-        label.setForeground(new Color(47, 47, 47));
-        label.setFont(new Font("Helvetica Neue", Font.PLAIN, 19));
+        label.setBounds(630, 370, 400, 55);
+        label.setForeground(new Color(80, 80, 80));
+        label.setFont(new Font("Helvetica Neue", Font.PLAIN, 18));
         add(label);
 
-        label = new JLabel("Total: R$ 40.000,00");
-        label.setBounds(900, 370, 400, 55);
+        label = new JLabel("+");
+        label.setBounds(780, 360, 18, 18);
+        label.setFont(new Font("Helvetica Neue", Font.PLAIN, 18));
+        label.setForeground(new Color(80, 80, 80));
+        add(label);
+
+        label = new JLabel();
+        label.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/money-icon.png")));
+        label.setBounds(880, 330, 400, 55);
+        add(label);
+
+        label = new JLabel("R$ 20.000,00");
+        label.setBounds(835, 370, 400, 55);
+        label.setForeground(new Color(80, 80, 80));
+        label.setFont(new Font("Helvetica Neue", Font.PLAIN, 18));
+        add(label);
+
+        label = new JLabel("=");
+        label.setBounds(1000, 360, 18, 18);
+        label.setFont(new Font("Helvetica Neue", Font.PLAIN, 18));
+        label.setForeground(new Color(80, 80, 80));
+        add(label);
+
+        label = new JLabel("R$ 40.000,00");
+        label.setBounds(1050, 360, 400, 22);
         label.setForeground(new Color(47, 47, 47));
         label.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
         add(label);

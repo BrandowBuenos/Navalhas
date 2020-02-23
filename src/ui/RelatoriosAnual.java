@@ -46,232 +46,193 @@ public class RelatoriosAnual extends JPanel implements ActionListener {
         add(label);
 
         label = new JLabel("Serviço");
-        label.setBounds(270, 10, 100, 55);
+        label.setBounds(330, 10, 100, 55);
         label.setForeground(new Color(47, 47, 47));
         label.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
         add(label);
 
         label = new JLabel("Total");
-        label.setBounds(465, 10, 100, 55);
+        label.setBounds(525, 10, 100, 55);
         label.setForeground(new Color(47, 47, 47));
         label.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
         add(label);
 
         // Corte
 
-        lContador = new JLabel("09");
-        lContador.setBounds(210, 70, 50, 24);
-        lContador.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
+        lContador = new JLabel("12.944");
+        lContador.setBounds(210, 90, 80, 24);
+        lContador.setFont(new Font("Helvetica Neue", Font.PLAIN, 20));
         lContador.setForeground(new Color(110, 110, 110));
         add(lContador);
 
         lServico = new JLabel("Corte");
-        lServico.setBounds(270, 70, 100, 24);
-        lServico.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
+        lServico.setBounds(330, 90, 100, 24);
+        lServico.setFont(new Font("Helvetica Neue", Font.PLAIN, 20));
         lServico.setForeground(new Color(110, 110, 110));
         add(lServico);
 
-        lValor = new JLabel("R$ 250,00");
-        lValor.setBounds(465, 70, 100, 24);
-        lValor.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
+        lValor = new JLabel("R$ 43.243,00");
+        lValor.setBounds(525, 90, 200, 24);
+        lValor.setFont(new Font("Helvetica Neue", Font.PLAIN, 20));
         lValor.setForeground(new Color(110, 110, 110));
         add(lValor);
 
         // Barba
 
-        lContador = new JLabel("00");
-        lContador.setBounds(210, 110, 50, 24);
-        lContador.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
+        lContador = new JLabel("12.249");
+        lContador.setBounds(210, 135, 80, 24);
+        lContador.setFont(new Font("Helvetica Neue", Font.PLAIN, 20));
         lContador.setForeground(new Color(110, 110, 110));
         add(lContador);
 
         lServico = new JLabel("Barba");
-        lServico.setBounds(270, 110, 100, 24);
-        lServico.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
+        lServico.setBounds(330, 135, 100, 24);
+        lServico.setFont(new Font("Helvetica Neue", Font.PLAIN, 20));
         lServico.setForeground(new Color(110, 110, 110));
         add(lServico);
 
         lValor = new JLabel("R$ 0,00");
-        lValor.setBounds(465, 110, 100, 24);
-        lValor.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
+        lValor.setBounds(525, 135, 200, 24);
+        lValor.setFont(new Font("Helvetica Neue", Font.PLAIN, 20));
         lValor.setForeground(new Color(110, 110, 110));
         add(lValor);
 
         // Sombrancelha
 
         lContador = new JLabel("00");
-        lContador.setBounds(210, 150, 50, 24);
-        lContador.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
+        lContador.setBounds(210, 180, 80, 24);
+        lContador.setFont(new Font("Helvetica Neue", Font.PLAIN, 20));
         lContador.setForeground(new Color(110, 110, 110));
         add(lContador);
 
         lServico = new JLabel("Sombrancelha");
-        lServico.setBounds(270, 150, 150, 24);
-        lServico.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
+        lServico.setBounds(330, 180, 150, 24);
+        lServico.setFont(new Font("Helvetica Neue", Font.PLAIN, 20));
         lServico.setForeground(new Color(110, 110, 110));
         add(lServico);
 
         lValor = new JLabel("R$ 0,00");
-        lValor.setBounds(465, 150, 100, 24);
-        lValor.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
+        lValor.setBounds(525, 180, 200, 24);
+        lValor.setFont(new Font("Helvetica Neue", Font.PLAIN, 20));
         lValor.setForeground(new Color(110, 110, 110));
         add(lValor);
 
         // Coloracao
 
         lContador = new JLabel("00");
-        lContador.setBounds(210, 190, 50, 24);
-        lContador.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
+        lContador.setBounds(210, 225, 80, 24);
+        lContador.setFont(new Font("Helvetica Neue", Font.PLAIN, 20));
         lContador.setForeground(new Color(110, 110, 110));
         add(lContador);
 
         lServico = new JLabel("Coloração");
-        lServico.setBounds(270, 190, 100, 24);
-        lServico.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
+        lServico.setBounds(330, 225, 100, 24);
+        lServico.setFont(new Font("Helvetica Neue", Font.PLAIN, 20));
         lServico.setForeground(new Color(110, 110, 110));
         add(lServico);
 
         lValor = new JLabel("R$ 0,00");
-        lValor.setBounds(465, 190, 100, 24);
-        lValor.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
+        lValor.setBounds(525, 225, 200, 24);
+        lValor.setFont(new Font("Helvetica Neue", Font.PLAIN, 20));
         lValor.setForeground(new Color(110, 110, 110));
         add(lValor);
 
         // Pigmentacao em barba
 
         lContador = new JLabel("00");
-        lContador.setBounds(210, 230, 50, 24);
-        lContador.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
+        lContador.setBounds(210, 270, 80, 24);
+        lContador.setFont(new Font("Helvetica Neue", Font.PLAIN, 20));
         lContador.setForeground(new Color(110, 110, 110));
         add(lContador);
 
-        lServico = new JLabel("Pigmentação em barba");
-        lServico.setBounds(270, 230, 180, 24);
-        lServico.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
+        lServico = new JLabel("Pigmentação");
+        lServico.setBounds(330, 270, 180, 24);
+        lServico.setFont(new Font("Helvetica Neue", Font.PLAIN, 20));
         lServico.setForeground(new Color(110, 110, 110));
         add(lServico);
 
         lValor = new JLabel("R$ 0,00");
-        lValor.setBounds(465, 230, 100, 24);
-        lValor.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
+        lValor.setBounds(525, 270, 200, 24);
+        lValor.setFont(new Font("Helvetica Neue", Font.PLAIN, 20));
         lValor.setForeground(new Color(110, 110, 110));
         add(lValor);
 
         // Selagem
 
         lContador = new JLabel("00");
-        lContador.setBounds(210, 270, 50, 24);
-        lContador.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
+        lContador.setBounds(210, 315, 80, 24);
+        lContador.setFont(new Font("Helvetica Neue", Font.PLAIN, 20));
         lContador.setForeground(new Color(110, 110, 110));
         add(lContador);
 
         lServico = new JLabel("Selagem");
-        lServico.setBounds(270, 270, 100, 24);
-        lServico.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
+        lServico.setBounds(330, 315, 100, 24);
+        lServico.setFont(new Font("Helvetica Neue", Font.PLAIN, 20));
         lServico.setForeground(new Color(110, 110, 110));
         add(lServico);
 
         lValor = new JLabel("R$ 0,00");
-        lValor.setBounds(465, 270, 100, 24);
-        lValor.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
+        lValor.setBounds(525, 315, 200, 24);
+        lValor.setFont(new Font("Helvetica Neue", Font.PLAIN, 20));
         lValor.setForeground(new Color(110, 110, 110));
         add(lValor);
 
         // Relaxamento
 
         lContador = new JLabel("00");
-        lContador.setBounds(210, 310, 50, 24);
-        lContador.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
+        lContador.setBounds(210, 360, 80, 24);
+        lContador.setFont(new Font("Helvetica Neue", Font.PLAIN, 20));
         lContador.setForeground(new Color(110, 110, 110));
         add(lContador);
 
         lServico = new JLabel("Relaxamento");
-        lServico.setBounds(270, 310, 100, 24);
-        lServico.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
+        lServico.setBounds(330, 360, 150, 24);
+        lServico.setFont(new Font("Helvetica Neue", Font.PLAIN, 20));
         lServico.setForeground(new Color(110, 110, 110));
         add(lServico);
 
         lValor = new JLabel("R$ 0,00");
-        lValor.setBounds(465, 310, 100, 24);
-        lValor.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
+        lValor.setBounds(525, 360, 200, 24);
+        lValor.setFont(new Font("Helvetica Neue", Font.PLAIN, 20));
         lValor.setForeground(new Color(110, 110, 110));
         add(lValor);
 
         // Luzes
 
-        lContador = new JLabel("00");
-        lContador.setBounds(210, 350, 50, 24);
-        lContador.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
+        lContador = new JLabel("243");
+        lContador.setBounds(210, 405, 80, 24);
+        lContador.setFont(new Font("Helvetica Neue", Font.PLAIN, 20));
         lContador.setForeground(new Color(110, 110, 110));
         add(lContador);
 
         lServico = new JLabel("Luzes");
-        lServico.setBounds(270, 350, 100, 24);
-        lServico.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
+        lServico.setBounds(330, 405, 100, 24);
+        lServico.setFont(new Font("Helvetica Neue", Font.PLAIN, 20));
         lServico.setForeground(new Color(110, 110, 110));
         add(lServico);
 
-        lValor = new JLabel("R$ 0,00");
-        lValor.setBounds(465, 350, 100, 24);
-        lValor.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
+        lValor = new JLabel("R$ 191.245,43");
+        lValor.setBounds(525, 405, 200, 24);
+        lValor.setFont(new Font("Helvetica Neue", Font.PLAIN, 20));
         lValor.setForeground(new Color(110, 110, 110));
         add(lValor);
 
-        // Pomadas
-
-        lContador = new JLabel("00");
-        lContador.setBounds(210, 390, 50, 24);
-        lContador.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
-        lContador.setForeground(new Color(110, 110, 110));
-        add(lContador);
-
-        lServico = new JLabel("Pomadas");
-        lServico.setBounds(270, 390, 100, 24);
-        lServico.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
-        lServico.setForeground(new Color(110, 110, 110));
-        add(lServico);
-
-        lValor = new JLabel("R$ 0,00");
-        lValor.setBounds(465, 390, 100, 24);
-        lValor.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
-        lValor.setForeground(new Color(110, 110, 110));
-        add(lValor);
-
-        // Doces
-
-        lContador = new JLabel("00");
-        lContador.setBounds(210, 430, 50, 24);
-        lContador.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
-        lContador.setForeground(new Color(110, 110, 110));
-        add(lContador);
-
-        lServico = new JLabel("Doces");
-        lServico.setBounds(270, 430, 100, 24);
-        lServico.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
-        lServico.setForeground(new Color(110, 110, 110));
-        add(lServico);
-
-        lValor = new JLabel("R$ 0,00");
-        lValor.setBounds(465, 430, 100, 24);
-        lValor.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
-        lValor.setForeground(new Color(110, 110, 110));
-        add(lValor);
 
         //
 
         line = new JLabel();
         line.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/line1.png")));
-        line.setBounds(600, 5, 889, 450);
+        line.setBounds(700, 5, 889, 450);
         add(line);
 
         label = new JLabel("Funcionário");
-        label.setBounds(630, 10, 150, 55);
+        label.setBounds(730, 10, 150, 55);
         label.setForeground(new Color(47, 47, 47));
         label.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
         add(label);
 
-        label = new JLabel("Nº de serviços");
-        label.setBounds(780, 10, 150, 55);
+        label = new JLabel("Nº");
+        label.setBounds(920, 10, 150, 55);
         label.setForeground(new Color(47, 47, 47));
         label.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
         add(label);
@@ -279,13 +240,13 @@ public class RelatoriosAnual extends JPanel implements ActionListener {
         // Barbeiro 01
 
         lBarbeiro = new JLabel("Hugo");
-        lBarbeiro.setBounds(630, 70, 100, 24);
+        lBarbeiro.setBounds(730, 90, 100, 24);
         lBarbeiro.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
         lBarbeiro.setForeground(new Color(110, 110, 110));
         add(lBarbeiro);
 
-        lContador = new JLabel("09");
-        lContador.setBounds(830, 70, 50, 24);
+        lContador = new JLabel("912");
+        lContador.setBounds(920, 90, 80, 24);
         lContador.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
         lContador.setForeground(new Color(110, 110, 110));
         add(lContador);
@@ -293,13 +254,13 @@ public class RelatoriosAnual extends JPanel implements ActionListener {
         // Barbeiro 02
 
         lBarbeiro = new JLabel("Mário");
-        lBarbeiro.setBounds(630, 110, 100, 24);
+        lBarbeiro.setBounds(730, 135, 100, 24);
         lBarbeiro.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
         lBarbeiro.setForeground(new Color(110, 110, 110));
         add(lBarbeiro);
 
-        lContador = new JLabel("10");
-        lContador.setBounds(830, 110, 50, 24);
+        lContador = new JLabel("912");
+        lContador.setBounds(920, 135, 80, 24);
         lContador.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
         lContador.setForeground(new Color(110, 110, 110));
         add(lContador);
@@ -307,13 +268,13 @@ public class RelatoriosAnual extends JPanel implements ActionListener {
         // Barbeiro 03
 
         lBarbeiro = new JLabel("Raimundo");
-        lBarbeiro.setBounds(630, 150, 100, 24);
+        lBarbeiro.setBounds(730, 180, 100, 24);
         lBarbeiro.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
         lBarbeiro.setForeground(new Color(110, 110, 110));
         add(lBarbeiro);
 
-        lContador = new JLabel("10");
-        lContador.setBounds(830, 150, 50, 24);
+        lContador = new JLabel("912");
+        lContador.setBounds(920, 180, 80, 24);
         lContador.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
         lContador.setForeground(new Color(110, 110, 110));
         add(lContador);
@@ -321,36 +282,51 @@ public class RelatoriosAnual extends JPanel implements ActionListener {
         // Barbeiro 04
 
         lBarbeiro = new JLabel("Sérgio");
-        lBarbeiro.setBounds(630, 190, 100, 24);
+        lBarbeiro.setBounds(730, 225, 100, 24);
         lBarbeiro.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
         lBarbeiro.setForeground(new Color(110, 110, 110));
         add(lBarbeiro);
 
-        lContador = new JLabel("10");
-        lContador.setBounds(830, 190, 50, 24);
+        lContador = new JLabel("912");
+        lContador.setBounds(920, 225, 80, 24);
         lContador.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
         lContador.setForeground(new Color(110, 110, 110));
         add(lContador);
 
-        label = new JLabel("Clientes atendidos: 100");
-        label.setBounds(630, 380, 400, 55);
+        //
+
+        line = new JLabel();
+        line.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/line1.png")));
+        line.setBounds(1000, 15, 2, 250);
+        add(line);
+
+        label = new JLabel("Clientes atendidos");
+        label.setBounds(1045, 10, 400, 55);
         label.setForeground(new Color(47, 47, 47));
         label.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
         add(label);
 
+        lContador = new JLabel("100");
+        lContador.setBounds(1090, 140, 400, 55);
+        lContador.setForeground(new Color(47, 47, 47));
+        lContador.setFont(new Font("Helvetica Neue UltraLight", Font.PLAIN, 35));
+        add(lContador);
+
+        //
+
         line = new JLabel();
-        line.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/line1.png")));
-        line.setBounds(950, 5, 889, 450);
+        line.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/horizontal-division-line.png")));
+        line.setBounds(730, 280, 520, 2);
         add(line);
 
         label = new JLabel("Total de Rendimentos");
-        label.setBounds(1010, 180, 400, 55);
+        label.setBounds(880, 320, 400, 55);
         label.setForeground(new Color(47, 47, 47));
         label.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
         add(label);
 
         label = new JLabel("R$ 20.000,00");
-        label.setBounds(1050, 230, 400, 55);
+        label.setBounds(920, 370, 400, 55);
         label.setForeground(new Color(47, 47, 47));
         label.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
         add(label);

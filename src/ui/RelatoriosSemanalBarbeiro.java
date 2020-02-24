@@ -7,7 +7,7 @@ import javax.swing.*;
 /**
  * Relatorios
  */
-public class RelatoriosSemanal extends JPanel implements ActionListener {
+public class RelatoriosSemanalBarbeiro extends JPanel implements ActionListener {
 
     private JPanel description;
     private JLabel customerIcon;
@@ -18,15 +18,9 @@ public class RelatoriosSemanal extends JPanel implements ActionListener {
     private JLabel lValor;
     private JLabel label;
 
-    private JButton bBarbeiro1;
-    private JButton bBarbeiro2;
-    private JButton bBarbeiro3;
-    private JButton bBarbeiro4;
+    private JButton bBarbeiro;
 
-    JPanel relSemBarbeiro;
-
-    public RelatoriosSemanal(JPanel relSemBarbeiro) {
-        this.relSemBarbeiro = relSemBarbeiro;
+    public RelatoriosSemanalBarbeiro() {
 
         removeAll();
 
@@ -63,7 +57,7 @@ public class RelatoriosSemanal extends JPanel implements ActionListener {
         label.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
         add(label);
 
-        lContador = new JLabel("12.944");
+        lContador = new JLabel("00");
         lContador.setBounds(210, 90, 80, 24);
         lContador.setFont(new Font("Helvetica Neue", Font.PLAIN, 20));
         lContador.setForeground(new Color(110, 110, 110));
@@ -75,7 +69,7 @@ public class RelatoriosSemanal extends JPanel implements ActionListener {
         lServico.setForeground(new Color(110, 110, 110));
         add(lServico);
 
-        lValor = new JLabel("R$ 43.243,00");
+        lValor = new JLabel("R$ 0,00");
         lValor.setBounds(465, 90, 200, 24);
         lValor.setFont(new Font("Helvetica Neue", Font.PLAIN, 20));
         lValor.setForeground(new Color(110, 110, 110));
@@ -83,7 +77,7 @@ public class RelatoriosSemanal extends JPanel implements ActionListener {
 
         // Barba
 
-        lContador = new JLabel("12.249");
+        lContador = new JLabel("00");
         lContador.setBounds(210, 135, 80, 24);
         lContador.setFont(new Font("Helvetica Neue", Font.PLAIN, 20));
         lContador.setForeground(new Color(110, 110, 110));
@@ -203,7 +197,7 @@ public class RelatoriosSemanal extends JPanel implements ActionListener {
 
         // Luzes
 
-        lContador = new JLabel("243");
+        lContador = new JLabel("00");
         lContador.setBounds(210, 405, 80, 24);
         lContador.setFont(new Font("Helvetica Neue", Font.PLAIN, 20));
         lContador.setForeground(new Color(110, 110, 110));
@@ -215,7 +209,7 @@ public class RelatoriosSemanal extends JPanel implements ActionListener {
         lServico.setForeground(new Color(110, 110, 110));
         add(lServico);
 
-        lValor = new JLabel("R$ 191.245,43");
+        lValor = new JLabel("R$ 0,00");
         lValor.setBounds(465, 405, 200, 24);
         lValor.setFont(new Font("Helvetica Neue", Font.PLAIN, 20));
         lValor.setForeground(new Color(110, 110, 110));
@@ -254,12 +248,11 @@ public class RelatoriosSemanal extends JPanel implements ActionListener {
 
         // Barbeiro 01
 
-        bBarbeiro1 = new JButton("Hugo");
-        bBarbeiro1.setBounds(630, 70, 100, 24);
-        bBarbeiro1.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
-        bBarbeiro1.setForeground(new Color(110, 110, 110));
-        bBarbeiro1.addActionListener(this);
-        add(bBarbeiro1);
+        bBarbeiro = new JButton("Hugo");
+        bBarbeiro.setBounds(630, 70, 100, 24);
+        bBarbeiro.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
+        bBarbeiro.setForeground(new Color(110, 110, 110));
+        add(bBarbeiro);
 
         lContador = new JLabel("09");
         lContador.setBounds(830, 70, 50, 24);
@@ -279,86 +272,7 @@ public class RelatoriosSemanal extends JPanel implements ActionListener {
         lContador.setForeground(new Color(110, 110, 110));
         add(lContador);
 
-        // Barbeiro 02
-
-        bBarbeiro2 = new JButton("Mário");
-        bBarbeiro2.setBounds(630, 110, 100, 24);
-        bBarbeiro2.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
-        bBarbeiro2.setForeground(new Color(110, 110, 110));
-        bBarbeiro2.addActionListener(this);
-        add(bBarbeiro2);
-
-        lContador = new JLabel("10");
-        lContador.setBounds(830, 110, 50, 24);
-        lContador.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
-        lContador.setForeground(new Color(110, 110, 110));
-        add(lContador);
-
-        lContador = new JLabel("09");
-        lContador.setBounds(1010, 110, 50, 24);
-        lContador.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
-        lContador.setForeground(new Color(110, 110, 110));
-        add(lContador);
-
-        lContador = new JLabel("09");
-        lContador.setBounds(1180, 110, 50, 24);
-        lContador.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
-        lContador.setForeground(new Color(110, 110, 110));
-        add(lContador);
-
-        // Barbeiro 03
-
-        bBarbeiro3 = new JButton("Raimundo");
-        bBarbeiro3.setBounds(630, 150, 100, 24);
-        bBarbeiro3.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
-        bBarbeiro3.setForeground(new Color(110, 110, 110));
-        bBarbeiro3.addActionListener(this);
-        add(bBarbeiro3);
-
-        lContador = new JLabel("10");
-        lContador.setBounds(830, 150, 50, 24);
-        lContador.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
-        lContador.setForeground(new Color(110, 110, 110));
-        add(lContador);
-
-        lContador = new JLabel("09");
-        lContador.setBounds(1010, 150, 50, 24);
-        lContador.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
-        lContador.setForeground(new Color(110, 110, 110));
-        add(lContador);
-
-        lContador = new JLabel("09");
-        lContador.setBounds(1180, 150, 50, 24);
-        lContador.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
-        lContador.setForeground(new Color(110, 110, 110));
-        add(lContador);
-
-        // Barbeiro 04
-
-        bBarbeiro4 = new JButton("Sérgio");
-        bBarbeiro4.setBounds(630, 190, 100, 24);
-        bBarbeiro4.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
-        bBarbeiro4.setForeground(new Color(110, 110, 110));
-        bBarbeiro4.addActionListener(this);
-        add(bBarbeiro4);
-
-        lContador = new JLabel("10");
-        lContador.setBounds(830, 190, 50, 24);
-        lContador.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
-        lContador.setForeground(new Color(110, 110, 110));
-        add(lContador);
-
-        lContador = new JLabel("09");
-        lContador.setBounds(1010, 190, 50, 24);
-        lContador.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
-        lContador.setForeground(new Color(110, 110, 110));
-        add(lContador);
-
-        lContador = new JLabel("09");
-        lContador.setBounds(1180, 190, 50, 24);
-        lContador.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
-        lContador.setForeground(new Color(110, 110, 110));
-        add(lContador);
+    
 
         //
 
@@ -367,6 +281,7 @@ public class RelatoriosSemanal extends JPanel implements ActionListener {
         line.setBounds(600, 250, 889, 2);
         add(line);
 
+    
         label = new JLabel("Rendimentos");
         label.setBounds(630, 270, 400, 55);
         label.setForeground(new Color(47, 47, 47));
@@ -417,32 +332,6 @@ public class RelatoriosSemanal extends JPanel implements ActionListener {
 
     public void actionPerformed(ActionEvent ae) {
 
-        if (ae.getSource() == bBarbeiro1) {
-
-            setVisible(false);
-            relSemBarbeiro.setVisible(true);
-        }
-
-
-        if (ae.getSource() == bBarbeiro2) {
-
-            setVisible(false);
-            relSemBarbeiro.setVisible(true);
-        }
-
-
-        if (ae.getSource() == bBarbeiro3) {
-
-            setVisible(false);
-            relSemBarbeiro.setVisible(true);
-        }
-
-
-        if (ae.getSource() == bBarbeiro4) {
-
-            setVisible(false);
-            relSemBarbeiro.setVisible(true);
-        }
     }
 
 }

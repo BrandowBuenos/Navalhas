@@ -18,12 +18,13 @@ public class Relatorios extends JPanel implements ActionListener {
     private JButton bAnual;
 
     JPanel relDia;
+    JPanel relDiaBarbeiro;
     JPanel relSem;
     JPanel relMes;
     JPanel relMen;
     JPanel relAnu;
 
-    public Relatorios(JPanel relDia, JPanel relSem, JPanel relMes, JPanel relAnu) {
+    public Relatorios(JPanel relDia,  JPanel relSem, JPanel relMes, JPanel relAnu) {
         this.relDia = relDia;
         this.relSem = relSem;
         this.relMes = relMes;

@@ -34,7 +34,8 @@ public class Janela implements ActionListener {
 
     public RelatoriosSemanalBarbeiro relSemBarbeiro = new RelatoriosSemanalBarbeiro();
     public RelatoriosSemanal relSem = new RelatoriosSemanal(relSemBarbeiro);
-    public RelatoriosMensal relMen = new RelatoriosMensal();
+    public RelatoriosMensalBarbeiro relMenBarbeiro = new RelatoriosMensalBarbeiro();
+    public RelatoriosMensal relMen = new RelatoriosMensal(relMenBarbeiro);
     public RelatoriosMes relMes = new RelatoriosMes(relMen);
     public RelatoriosAnual relAnu = new RelatoriosAnual();
     public Relatorios rel = new Relatorios(relDia, relSem, relMes, relAnu);
@@ -73,6 +74,7 @@ public class Janela implements ActionListener {
         frame.getContentPane().add(relSem);
         frame.getContentPane().add(relSemBarbeiro);
         frame.getContentPane().add(relMes);
+        frame.getContentPane().add(relMenBarbeiro);
         frame.getContentPane().add(relMen);
         frame.getContentPane().add(relAnu);
 
@@ -92,6 +94,7 @@ public class Janela implements ActionListener {
         relSemBarbeiro.setVisible(false);
         relMes.setVisible(false);
         relMen.setVisible(false);
+        relMenBarbeiro.setVisible(false);
         relAnu.setVisible(false);
 
         panel();
@@ -243,6 +246,7 @@ public class Janela implements ActionListener {
             relSemBarbeiro.setVisible(false);
             relMes.setVisible(false);
             relMen.setVisible(false);
+            relMenBarbeiro.setVisible(false);
             relAnu.setVisible(false);
 
         }
@@ -267,6 +271,7 @@ public class Janela implements ActionListener {
             relSemBarbeiro.setVisible(false);
             relMes.setVisible(false);
             relMen.setVisible(false);
+            relMenBarbeiro.setVisible(false);
             relAnu.setVisible(false);
 
         }
@@ -291,6 +296,7 @@ public class Janela implements ActionListener {
             relSemBarbeiro.setVisible(false);
             relMes.setVisible(false);
             relMen.setVisible(false);
+            relMenBarbeiro.setVisible(false);
             relAnu.setVisible(false);
         }
 

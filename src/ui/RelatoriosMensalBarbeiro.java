@@ -220,75 +220,34 @@ public class RelatoriosMensalBarbeiro extends JPanel implements ActionListener {
         lValor.setForeground(new Color(110, 110, 110));
         add(lValor);
 
-
         //
+
 
         line = new JLabel();
         line.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/line1.png")));
-        line.setBounds(700, 5, 889, 450);
+        line.setBounds(650, 5, 889, 450);
         add(line);
 
-        label = new JLabel("Funcionário");
-        label.setBounds(730, 10, 150, 55);
+        label = new JLabel("Hugo");
+        label.setBounds(680, 120, 150, 55);
         label.setForeground(new Color(47, 47, 47));
+        label.setFont(new Font("Helvetica Neue", Font.PLAIN, 23));
+        add(label);
+
+        label = new JLabel("Quantidade de serviços: 3193");
+        label.setBounds(680, 180, 300, 55);
+        label.setForeground(new Color(115, 115, 115));
         label.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
         add(label);
 
-        label = new JLabel("Nº");
-        label.setBounds(920, 10, 150, 55);
-        label.setForeground(new Color(47, 47, 47));
+        label = new JLabel("Valor total: R$ 21.230,00");
+        label.setBounds(680, 230, 300, 55);
+        label.setForeground(new Color(115, 115, 115));
         label.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
         add(label);
 
-        // Barbeiro 01
-
-        bBarbeiro1 = new JButton("Hugo");
-        bBarbeiro1.setBounds(730, 90, 100, 24);
-        bBarbeiro1.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
-        bBarbeiro1.setForeground(new Color(110, 110, 110));
-        bBarbeiro1.addActionListener(this);
-        add(bBarbeiro1);
-
-        lContador = new JLabel("912");
-        lContador.setBounds(920, 90, 80, 24);
-        lContador.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
-        lContador.setForeground(new Color(110, 110, 110));
-        add(lContador);
-
-        //
-
-        line = new JLabel();
-        line.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/line1.png")));
-        line.setBounds(1000, 15, 2, 250);
-        add(line);
-
-        label = new JLabel("Clientes atendidos");
-        label.setBounds(1045, 10, 400, 55);
-        label.setForeground(new Color(47, 47, 47));
-        label.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
-        add(label);
-
-        lContador = new JLabel("100");
-        lContador.setBounds(1090, 140, 400, 55);
-        lContador.setForeground(new Color(47, 47, 47));
-        lContador.setFont(new Font("Helvetica Neue UltraLight", Font.PLAIN, 35));
-        add(lContador);
-
-        //
-
-        line = new JLabel();
-        line.setIcon(new javax.swing.ImageIcon(getClass().getResource("icons/horizontal-division-line.png")));
-        line.setBounds(730, 280, 520, 2);
-        add(line);
-
-        label = new JLabel("Total de Rendimentos");
-        label.setBounds(880, 320, 400, 55);
-        label.setForeground(new Color(47, 47, 47));
-        label.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
-        add(label);
-
-        label = new JLabel("R$ 20.000,00");
-        label.setBounds(920, 370, 400, 55);
+        label = new JLabel("Comissão: R$ 6.543,00");
+        label.setBounds(680, 280, 300, 55);
         label.setForeground(new Color(47, 47, 47));
         label.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
         add(label);

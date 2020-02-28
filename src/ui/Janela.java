@@ -37,7 +37,8 @@ public class Janela implements ActionListener {
     public RelatoriosMensalBarbeiro relMenBarbeiro = new RelatoriosMensalBarbeiro();
     public RelatoriosMensal relMen = new RelatoriosMensal(relMenBarbeiro);
     public RelatoriosMes relMes = new RelatoriosMes(relMen);
-    public RelatoriosAnual relAnu = new RelatoriosAnual();
+    public RelatoriosAnualBarbeiro relAnuBarbeiro = new RelatoriosAnualBarbeiro();
+    public RelatoriosAnual relAnu = new RelatoriosAnual(relAnuBarbeiro);
     public Relatorios rel = new Relatorios(relDia, relSem, relMes, relAnu);
 
     private static JPanel panel;
@@ -77,6 +78,7 @@ public class Janela implements ActionListener {
         frame.getContentPane().add(relMenBarbeiro);
         frame.getContentPane().add(relMen);
         frame.getContentPane().add(relAnu);
+        frame.getContentPane().add(relAnuBarbeiro);
 
         cli.setVisible(false);
         addCli.setVisible(false);
@@ -96,6 +98,7 @@ public class Janela implements ActionListener {
         relMen.setVisible(false);
         relMenBarbeiro.setVisible(false);
         relAnu.setVisible(false);
+        relAnuBarbeiro.setVisible(false);
 
         panel();
         fundo();
@@ -248,7 +251,7 @@ public class Janela implements ActionListener {
             relMen.setVisible(false);
             relMenBarbeiro.setVisible(false);
             relAnu.setVisible(false);
-
+            relAnuBarbeiro.setVisible(false);
         }
 
         if (ae.getSource() == bAssinaturas) {
@@ -273,6 +276,8 @@ public class Janela implements ActionListener {
             relMen.setVisible(false);
             relMenBarbeiro.setVisible(false);
             relAnu.setVisible(false);
+            relAnuBarbeiro.setVisible(false);
+
 
         }
 
@@ -298,6 +303,8 @@ public class Janela implements ActionListener {
             relMen.setVisible(false);
             relMenBarbeiro.setVisible(false);
             relAnu.setVisible(false);
+            relAnuBarbeiro.setVisible(false);
+
         }
 
     }

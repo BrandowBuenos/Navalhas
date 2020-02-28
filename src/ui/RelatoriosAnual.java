@@ -328,14 +328,26 @@ public class RelatoriosAnual extends JPanel implements ActionListener {
         line.setBounds(730, 280, 520, 2);
         add(line);
 
-        label = new JLabel("Total de Rendimentos");
-        label.setBounds(880, 320, 400, 55);
+        label = new JLabel("Valor bruto");
+        label.setBounds(780, 320, 400, 55);
+        label.setForeground(new Color(115, 115, 115));
+        label.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
+        add(label);
+
+        label = new JLabel("R$ 2.000.000,00");
+        label.setBounds(760, 370, 400, 55);
+        label.setForeground(new Color(115, 115, 115));
+        label.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
+        add(label);
+
+        label = new JLabel("Valor líquido");
+        label.setBounds(1020, 320, 400, 55);
         label.setForeground(new Color(47, 47, 47));
         label.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
         add(label);
 
-        label = new JLabel("R$ 20.000,00");
-        label.setBounds(920, 370, 400, 55);
+        label = new JLabel("R$ 1.000.000,00");
+        label.setBounds(1010, 370, 400, 55);
         label.setForeground(new Color(47, 47, 47));
         label.setFont(new Font("Helvetica Neue", Font.PLAIN, 21));
         add(label);
